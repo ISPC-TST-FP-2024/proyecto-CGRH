@@ -1,7 +1,6 @@
-![alt text](/Recursos/visuales/caratula.png)
 # Tecnicatura Superior en Telecomunicaciones
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
-### Alumnos: Jose Marquez,bLuciano Lujan, Vittorio Durigutti, FernandoGC, Lisandro Juncos, , tpaez, Marcos-BR-03
+### Alumnos: Jose Marquez, Luciano Lujan, Vittorio Durigutti, FernandoGC, Lisandro Juncos, , tpaez, Marcos-BR-03
 ### Informacion General
 ***
 Carpeta: ***D Precentacion***

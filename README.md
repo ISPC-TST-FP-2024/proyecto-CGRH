@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 ![alt text](/caratula.png)  
 # Tecnicatura Superior en Telecomunicaciones
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
-### Alumnos: Jose Marquez,bLuciano Lujan, Vittorio Durigutti, FernandoGC, Lisandro Juncos, , tpaez, Marcos-BR-03
+### Alumnos: Jose Marquez, Luciano Lujan, Vittorio Durigutti, FernandoGC, Lisandro Juncos, , tpaez, Marcos-BR-03
+=======
+
+# Tecnicatura Superior en Telecomunicaciones
+### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
+### Alumnos: Jose Marquez, Luciano Lujan, Vittorio Durigutti, FernandoGC, Lisandro Juncos, Macarena Carballo , tpaez, Marcos-BR-03
+>>>>>>> 4ed0f8dd0cb0de9c366a728d23f3f384a6fd7508
 
 ### La Formación Profesional
-
+ 
 El trayecto formativo de "Desarrollador de Dispositivos IoT" busca formar técnicos capacitados para desempeñarse en todas las capas del Internet de las Cosas (IoT), desarrollando, administrando y manteniendo proyectos de IoT. Esto implica:
 
 • Desarrollo de dispositivos para el IoT  
