@@ -51,7 +51,8 @@ __Apoyar la Documentación Final:__ Contribuir a la elaboración de informes, pr
 ***
 ## Actualizacion
 ***
-20240815  
-se agrego investigacion para debatir en la proxima reunion  
+20240815 
+Se actualizo Readme. 
+se agrego investigacion para debatir en la proxima reunion.  
 los subi en word por que falta mas informacion por favor revisar y corregir.
 ***
