@@ -9,6 +9,8 @@ Carpeta: ***A Requisitos***
 
 ***En esta carpeta estara los requisitos del fP:***
 
+Desarrollar un sistema de control y monitoreo distribuido para optimizar el uso y gestión del agua en diferentes entornos. Este controlador, tipo célula, es capaz de abarcar el control general y amplio de jardines, plazas, huertas urbanas, así como grandes plantaciones agrícolas en campos rurales. El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la gestión y monitoreo inteligente de los recursos hídricos locales.  
+ 
 
 
 
