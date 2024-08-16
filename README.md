@@ -16,7 +16,8 @@
 - Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
 - Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr).
 - Raul Jara, GitHub: [@r-j28](https://github.com/r-j28).
-
+- Nahuel Velez: ([GitHub](https://github.com/Lucasmurua19).
+  
 ### La Formación Profesional
  
 El trayecto formativo de "Desarrollador de Dispositivos IoT" busca formar técnicos capacitados para desempeñarse en todas las capas del Internet de las Cosas (IoT), desarrollando, administrando y manteniendo proyectos de IoT. Esto implica:
