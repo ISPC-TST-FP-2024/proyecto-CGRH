@@ -6,11 +6,11 @@
 ### Alumnos: 
 - Jose Marquez, GitHub: [@Jose Marquez](https://github.com/marquezjose).
 - Luciano Lujan, GitHub: [@Luciano Lujan](https://github.com/lucianoilujan).
-- Vittorio Durigutti, GitHub: [@alumno](https://github.com/alumno).
+- Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).
 - Lisandro Juncos, GitHub: [@Lisandro Juncos](https://github.com/Lisandro-05).
-- tpaez, GitHub: [@tpaez](https://github.com/tpaez).
-- Marcos-BR-03, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
-- karina jazmin barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
+- Tiziano Paez, GitHub: [@tpaez](https://github.com/tpaez).
+- Marcos Bordón, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
+- Karina Jazmin Barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
 - Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
 - Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
 - Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
@@ -30,9 +30,9 @@ El trayecto formativo de "Desarrollador de Dispositivos IoT" busca formar técni
 Extructura pedida por el profesor  
 • En la carpeta ***"A Requisitos":*** se encuentran los requisitos de la tarea.   
 • En la carpeta ***"B Investigación":*** se encuentran las investigaciones sobre la tarea pedida.  
-• En la carpeta ***"C Prototipo":*** se encuentran las primera inplemntaciones de las 2 carpetas anteriores.   
-• En la carpeta ***"D presentación":*** se encuentran la preecentacion de trabajo concluido.  
-• En la carpeta ***"Recursos":*** se encuentran los archivos para la extructura ABP.  
+• En la carpeta ***"C Prototipo":*** se encuentran las primeras implementaciones de las 2 carpetas anteriores.   
+• En la carpeta ***"D presentación":*** se encuentran la presentación del trabajo concluido.
+• En la carpeta ***"E Recursos":*** se encuentran los archivos para la estructura ABP.  
 
 
 ### FP: Desarrollador de Dispositivos IoT
