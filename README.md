@@ -6,7 +6,6 @@
 ### Alumnos: 
 - Jose Marquez, GitHub: [@Jose Marquez](https://github.com/marquezjose).
 - Luciano Lujan, GitHub: [@Luciano Lujan](https://github.com/lucianoilujan).
-- Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).
 - Lisandro Juncos, GitHub: [@Lisandro Juncos](https://github.com/Lisandro-05).
 - Tiziano Paez, GitHub: [@tpaez](https://github.com/tpaez).
 - Marcos Bordón, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
@@ -16,6 +15,7 @@
 - Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
 - Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr).
 - Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
+- Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).
 
 ### La Formación Profesional
  
