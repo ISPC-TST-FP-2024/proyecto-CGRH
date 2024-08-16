@@ -1,12 +1,10 @@
 # Tecnicatura Superior en Telecomunicaciones
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
-### Alumnos: Jose Marquez, Luciano Lujan, Vittorio Durigutti, FernandoGC, Lisandro Juncos, , tpaez, Marcos-BR-03
-
-### Informacion General
 ***
-Carpeta: ***B Investigación***
-# Investigación
+### Informacion General
 
+Carpeta: ***B Investigación***
+### Investigación
 ***
 __La carpeta "B Investigación" alberga el material y los documentos relacionados con la investigación en curso. Aquí se recopilan todos los elementos esenciales para el desarrollo y análisis del proyecto, incluyendo:__  
 
@@ -21,20 +19,15 @@ __Metodología:__ Descripción detallada de los métodos y enfoques utilizados e
 __Referencias:__ Citas y bibliografía de fuentes consultadas durante la investigación.   
 ***
 
-
-
-
-
-## Recursos
+### Recursos
 Software 
 ```
-visualizador de PDF.  
-visualizador de word.  
-
-
+visualizador de PDF.
+visualizador de word.
 ```
-## Objetivos
 ***
+### Objetivos
+
 __Centralizar Información:__ Organizar y almacenar toda la documentación y datos relevantes de la investigación en un solo lugar para facilitar el acceso y la gestión.  
 
 __Facilitar el Análisis:__ Provee una estructura ordenada que permita una revisión eficiente y un análisis detallado de la información recopilada.  
