@@ -15,7 +15,7 @@
 - Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
 - Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
 - Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr).
-- Raul Jara, GitHub: [@r-j28](https://github.com/r-j28).
+- Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
 
 ### La Formación Profesional
  
