@@ -3,7 +3,7 @@
 ### Alumnos: 
 - Jose Marquez, GitHub: [@Jose Marquez](https://github.com/marquezjose).
 - Luciano Lujan, GitHub: [@Luciano Lujan](https://github.com/lucianoilujan).
-- Vittorio Durigutti, GitHub: [@alumno](https://github.com/alumno).
+- Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).  
 - Lisandro Juncos, GitHub: [@Lisandro Juncos](https://github.com/Lisandro-05).
 - tpaez, GitHub: [@tpaez](https://github.com/tpaez).
 - Marcos-BR-03, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
@@ -12,7 +12,8 @@
 - Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
 - Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
 - Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr).
-- Raul Jara, GitHub: [@r-j28](https://github.com/r-j28).  
+- Raul Jara, GitHub: [@r-j28](https://github.com/r-j28).
+- Joaquin Zalazar, GitHub: [@Joaquin-Zalazar](https://github.com/breaakerr).  
 
 ### Informacion General
 ***
