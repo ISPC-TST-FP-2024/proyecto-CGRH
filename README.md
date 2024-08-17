@@ -16,6 +16,7 @@
 - Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr).
 - Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
 - Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).
+- Joaquin Zalazar, GitHub: [@Joaquin-Zalazar](https://github.com/breaakerr).
 
 ### La Formación Profesional
  
