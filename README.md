@@ -107,7 +107,7 @@ Materia Responsable: Redes
 Objetivo de la Semana: Definir la arquitectura de red, planificar la comunicación, identificar variables y definir conceptos básicos del proyecto IoT.  
 
 ### Actividades:
-Reunión inicial para discutir el alcance del proyecto y asignación de roles y responsabilidades.  ✖   
+Reunión inicial para discutir el alcance del proyecto y asignación de roles y responsabilidades.  ✔   
 Investigación y documentación de métodos y protocolos de comunicación (LoRa, MQTT).  ✔   
 Identificación y listado de variables a sensorizar (humedad del suelo, pH, lluvia, temperatura).  ✔   
 
@@ -115,3 +115,8 @@ Diseño inicial de la arquitectura de red.  ✖
 Configuración de repositorios Git y GitHub. ✔   
 Creación de un cronograma de hitos importantes y sistema de seguimiento de tareas (Kanban).  ✖  
 ***
+**uh1tk19** Documentación de roles y responsabilidades.
+  
+  A continuación se detalla gráficamente la asignación de roles para el equipo. 
+
+  <center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></center>
