@@ -17,7 +17,8 @@
 - Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
 - Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).  
 - Joaquin Zalazar, GitHub: [@Joaquin-Zalazar](https://github.com/breaakerr).  
-- Patricio Leandro Roldan, Github:  [@pleroldan](https://github.com/pleroldan).  
+- Patricio Leandro Roldan, Github:  [@pleroldan](https://github.com/pleroldan).
+- Romina Huk,  Github:  [@RoHu17](https://github.com/RoHu17).
 
 ### La Formación Profesional
  
