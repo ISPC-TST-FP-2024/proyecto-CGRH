@@ -63,13 +63,15 @@ Desarrollar un sistema de control y monitoreo distribuido para optimizar el uso 
 • Metodologías: ABP (Aprendizaje Basado en Proyectos), Kanban,Scrum, Agile  
 
 ### Protocolos de Comunicación:
-• UART, SPI, I2C: Comunicación entre sensores y microcontroladores
-• WiFi/Bluetooth: Conectividad para ESP32
-• MQTT: Protocolo de comunicación para IoT
-• HTTP/HTTPS: Integración con servidores web y APIs REST
-• TCP, UDP, IPv6, OpenThread, Matter, Thread, Zigbee, LoRa Visualización:  
-• Interfaces de Usuario: Paneles de control basados en web utilizando herramientas como Node-RED, otros tipo HMI (LCD, OLED,etc)  
-• Visualización de Datos: Opciones provistas por docentes desde el cloud  
+• UART, SPI, I2C: Comunicación entre sensores y microcontroladores.  
+• WiFi/Bluetooth: Conectividad para ESP32.  
+• MQTT: Protocolo de comunicación para IoT.  
+• HTTP/HTTPS: Integración con servidores web y APIs REST.  
+• TCP, UDP, IPv6, OpenThread, Matter, Thread, Zigbee, LoRa
+ ### Visualización:
+• Interfaces de Usuario: Paneles de control basados en web utilizando herramientas como Node-RED, otros tipo HMI (LCD, OLED,etc).      
+• Visualización de Datos: Opciones provistas por docentes desde el cloud.  
+  
 ## Recursos
 
 ```
