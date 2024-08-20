@@ -2,8 +2,10 @@
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
 ***
 ### Informacion General
-Se crearon carpetas específicas para mejorar la agilidad durante la investigación en cada uno de los Sprints. Para cada Sprint, se implementaron 4 carpetas con el objetivo de organizar mejor la información y optimizar el flujo de trabajo al añadir los datos complementarios.  
- Esto facilita un acceso más rápido y eficiente a la documentación relevante, asegurando que los avances se integren de manera coherente en cada etapa del proyecto.  
+ Reunión inicial para discutir el alcance del proyecto y asignación de roles y responsabilidades.   
+ Investigación y documentación de métodos y protocolos de comunicación (LoRa, MQTT).  
+ Identificación y listado de variables a sensorizar (humedad del suelo, pH, lluvia, temperatura).  
+ Diseño inicial de la arquitectura de red.  
 
 Carpeta: ***B Investigación***
 ### Investigación
@@ -46,10 +48,7 @@ __Apoyar la Documentación Final:__ Contribuir a la elaboración de informes, pr
 ***
 ## Actualizacion
 ***
-**20240815**   
-Se actualizo Readme. 
-se agrego investigacion para debatir en la proxima reunion.  
-los subi en word por que falta mas informacion por favor revisar y corregir.   
+ 
 **20240820**  
 Se implementaron 4 carpetas por Sprint para mejorar la organización y agilizar el proceso de investigación, facilitando el acceso y la integración de los datos en cada etapa del proyecto.  
 ***
