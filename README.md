@@ -20,7 +20,8 @@
 - Patricio Leandro Roldan, Github:  [@pleroldan](https://github.com/pleroldan).
 - Romina Huk,  Github:  [@RoHu17](https://github.com/RoHu17).
 - Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
-- Laura Analia Brizuela, GitHub: [@gerbena03] (https://github.com/gerbena03).
+- Paola Natalia Alejandra Pantoja, Github:[@PaolaaPantoja](https://github.com/PaolaaPantoja).
+- Laura Analia Brizuela, GitHub:[@gerbena03](https://github.com/gerbena03).
 
 ### La Formación Profesional
  
