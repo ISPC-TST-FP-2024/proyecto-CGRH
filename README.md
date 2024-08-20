@@ -21,6 +21,7 @@
 - Romina Huk,  Github:  [@RoHu17](https://github.com/RoHu17).
 - Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
 - Paola Natalia Alejandra Pantoja, Github:[@PaolaaPantoja](https://github.com/PaolaaPantoja).
+- Laura Analia Brizuela, GitHub: [@gerbena03] (https://github.com/gerbena03).
 
 ### La Formación Profesional
  
