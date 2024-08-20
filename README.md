@@ -15,9 +15,13 @@
 - Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
 - Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr).
 - Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
-- Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).
-- Joaquin Zalazar, GitHub: [@Joaquin-Zalazar](https://github.com/breaakerr).
-- Nahuel Velez, GitHub: [@Lucasmurua19](https://github.com/Lucasmurua19).
+- Vittorio Durigutti, GitHub: [@Vittorio Dirigutti](https://github.com/vittoriodurigutti).  
+- Joaquin Zalazar, GitHub: [@Joaquin-Zalazar](https://github.com/breaakerr).  
+- Patricio Leandro Roldan, Github:  [@pleroldan](https://github.com/pleroldan).
+- Romina Huk,  Github:  [@RoHu17](https://github.com/RoHu17).
+- Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
+- Paola Natalia Alejandra Pantoja, Github:[@PaolaaPantoja](https://github.com/PaolaaPantoja).
+- Laura Analia Brizuela, GitHub:[@gerbena03](https://github.com/gerbena03).
 
 ### La Formación Profesional
  
@@ -108,7 +112,7 @@ Materia Responsable: Redes
 Objetivo de la Semana: Definir la arquitectura de red, planificar la comunicación, identificar variables y definir conceptos básicos del proyecto IoT.  
 
 ### Actividades:
-Reunión inicial para discutir el alcance del proyecto y asignación de roles y responsabilidades.  ✖   
+Reunión inicial para discutir el alcance del proyecto y asignación de roles y responsabilidades.  ✔   
 Investigación y documentación de métodos y protocolos de comunicación (LoRa, MQTT).  ✔   
 Identificación y listado de variables a sensorizar (humedad del suelo, pH, lluvia, temperatura).  ✔   
 
@@ -116,3 +120,8 @@ Diseño inicial de la arquitectura de red.  ✖
 Configuración de repositorios Git y GitHub. ✔   
 Creación de un cronograma de hitos importantes y sistema de seguimiento de tareas (Kanban).  ✖  
 ***
+**uh1tk19** Documentación de roles y responsabilidades.
+  
+  A continuación se detalla gráficamente la asignación de roles para el equipo. 
+
+  <center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></center>

@@ -14,6 +14,7 @@
 - Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr).
 - Raul Jara, GitHub: [@r-j28](https://github.com/r-j28).
 - Joaquin Zalazar, GitHub: [@Joaquin-Zalazar](https://github.com/breaakerr).
+- Patricio Leandro Roldan, Github:  [@pleroldan](https://github.com/pleroldan).  
 
 ### Informacion General
 
