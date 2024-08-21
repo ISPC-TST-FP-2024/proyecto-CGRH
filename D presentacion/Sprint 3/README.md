@@ -1,14 +1,11 @@
 # Tecnicatura Superior en Telecomunicaciones
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
 
-### Informacion General
+## Informacion General
 ***
-Carpeta: ***D Precentacion***
+### Carpeta: ***D Presentación***  
 
-# Precentaciòn
-
-__La carpeta "D Presentación" está diseñada para agrupar toda la documentación y materiales necesarios para la presentación y defensa del proyecto final. En esta carpeta se incluyen:__     
-
+__La carpeta "D Presentación" está diseñada para agrupar toda la documentación y materiales necesarios para la presentación y defensa del proyecto final. En esta carpeta se incluyen:__
 
 __Documentación Final:__ Toda la información y documentos preparados para la entrega final del proyecto, incluyendo informes completos, resúmenes ejecutivos, y cualquier otro material requerido para la presentación.  
 
@@ -19,10 +16,8 @@ __Defensa del Proyecto:__ Materiales y notas relacionadas con la defensa del pro
 __Video Corto:__ Un video explicativo breve que resume el proyecto, destacando sus objetivos, metodología, resultados y conclusiones. Este video sirve como una herramienta adicional para comunicar de manera efectiva el alcance y el impacto del proyecto.  
 
 
-
-
 ## Recursos
-Software 
+Software 💻
 ```
 Microsoft PowerPoint / Google Slides  
 Microsoft Word / Google Docs  

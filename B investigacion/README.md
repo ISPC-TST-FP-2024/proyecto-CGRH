@@ -22,10 +22,10 @@ __Referencias:__ Citas y bibliografía de fuentes consultadas durante la investi
 ***
 
 ### Recursos
-Software 
+Software 💻
 ```
-visualizador de PDF.
-visualizador de word.
+Visualizador de PDF.
+Visualizador de word.
 ```
 ***
 ### Objetivos

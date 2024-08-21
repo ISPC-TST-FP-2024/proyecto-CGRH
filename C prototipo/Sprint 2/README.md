@@ -1,13 +1,9 @@
- # Tecnicatura Superior en Telecomunicaciones
+# Tecnicatura Superior en Telecomunicaciones
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
 
-### Informacion General
-
+## Informacion General
 ***
-Carpeta: ***C prototipo***
-
-***
-# Prototipo
+### Carpeta: ***D Prototipo*** 
 
 __La carpeta "C Prototipo" esta toda la documentación y materiales relacionados con el desarrollo y evaluación del prototipo. En esta carpeta se incluyen:__  
 
@@ -15,7 +11,7 @@ __Diseño y Planificación:__ Planos, esquemas, y especificaciones técnicas del
 
 __Documentación del Desarrollo:__ Registros detallados de cada etapa del proceso de construcción, incluyendo materiales utilizados, técnicas aplicadas, y modificaciones realizadas.  
 
-__Resultados de Pruebas__ Informes y datos derivados de las pruebas realizadas al prototipo, incluyendo análisis de rendimiento y cualquier ajuste necesario.  
+__Resultados de Pruebas:__ Informes y datos derivados de las pruebas realizadas al prototipo, incluyendo análisis de rendimiento y cualquier ajuste necesario.  
 
 __Problemas y Soluciones:__ Descripción de problemas encontrados durante el desarrollo y las soluciones implementadas para resolverlos.  
 
@@ -23,65 +19,59 @@ __Referencias y Recursos:__ Cualquier recurso adicional, como manuales, guías t
 ***
 
 
-
-
-
 ## Recursos
-Software 
-```
-Entorno de Desarrollo:
+#### Software 💻
 
-VSCode: Para escribir y gestionar el código.
+**Entorno de Desarrollo:**  
+**• VSCode:** Para escribir y gestionar el código.
 PlatformIO: Para facilitar el desarrollo con ESP32 y otros microcontroladores.
 Lenguaje de Programación:
 
-C/C++: Común para la programación de microcontroladores.
+**• C/C++:** Común para la programación de microcontroladores.
 Python: Para scripts de procesamiento de datos o control.
 
-Bibliotecas y Frameworks:
-Arduino Libraries: Para trabajar con sensores y módulos específicos.
+**Bibliotecas y Frameworks:**  
+**• Arduino Libraries:** Para trabajar con sensores y módulos específicos.
 ESP-IDF o Arduino Core para ESP32: Para programación específica del ESP32.  
 
-Herramientas de Comunicación:
-MQTT Broker: Para la comunicación entre dispositivos y el servidor central.
+**Herramientas de Comunicación:**  
+**• MQTT Broker:** Para la comunicación entre dispositivos y el servidor central.
 Protocolos de Comunicación: Implementación de MQTT, HTTP/HTTPS para enviar y recibir datos.
 
-Visualización y Control:
-Interfaz Web: Para monitorear y controlar el sistema desde un navegador (puedes usar frameworks como React, Vue.js, o simplemente HTML/CSS/JavaScript).
+**Visualización y Control:**  
+**• Interfaz Web:** Para monitorear y controlar el sistema desde un navegador (puedes usar frameworks como React, Vue.js, o simplemente HTML/CSS/JavaScript).
 Plataformas en la Nube: AWS, Azure, o Google Cloud para almacenar datos y manejar la visualización en la nube.
 
-Control de Versiones:
-Git: Para el control de versiones del código y la colaboración en el desarrollo (usualmente acompañado de GitHub, GitLab o Bitbucket).
+**Control de Versiones:**  
+**• Git:** Para el control de versiones del código y la colaboración en el desarrollo (usualmente acompañado de GitHub, GitLab o Bitbucket).
 
-```
 
-Hardware 
-```
-Microcontroladores
-ESP32: Ideal por su conectividad (WiFi y Bluetooth) y capacidad de procesamiento.
+#### Hardware ⚙
 
-Sensores:
-Sensor de Humedad del Suelo:__ Para medir la humedad en el suelo.
-Sensor de pH: Para medir el pH del suelo o del agua.
-Sensor de Lluvia: Para detectar precipitaciones y ajustar el riego en consecuencia.
-Sensor de Temperatura: Para medir la temperatura ambiental.
+**Microcontroladores:**  
+**• ESP32:** Ideal por su conectividad (WiFi y Bluetooth) y capacidad de procesamiento.
 
-Módulos de Comunicación:   
-Módulos LoRa: Para comunicación de largo alcance, ideal en áreas rurales.  
-Módulos Zigbee o Thread: Para redes de sensores de corto a medio alcance.  
+**Sensores:**  
+**• Sensor de Humedad del Suelo:** Para medir la humedad en el suelo.  
+**• Sensor de pH:** Para medir el pH del suelo o del agua.  
+**• Sensor de Lluvia:** Para detectar precipitaciones y ajustar el riego en consecuencia.  
+**• Sensor de Temperatura:** Para medir la temperatura ambiental.
 
-Actuadores:
-Válvulas de Riego: Para controlar el flujo de agua.
-Bombas de Agua: Si el sistema necesita bombear agua desde una fuente externa.
+**Módulos de Comunicación:**  
+**• Módulos LoRa:** Para comunicación de largo alcance, ideal en áreas rurales.  
+**• Módulos Zigbee o Thread:** Para redes de sensores de corto a medio alcance.  
 
-Fuente de Energía:
-Baterías o Paneles Solares: Según la ubicación y la duración de funcionamiento necesario.
+**Actuadores:**  
+**• Válvulas de Riego:** Para controlar el flujo de agua.  
+**• Bombas de Agua:** Si el sistema necesita bombear agua desde una fuente externa.
 
-Elementos de Soporte:
-Cables y Conectores: Para conectar sensores y actuadores a los microcontroladores.
-Caja de Protección: Para resguardar los componentes electrónicos de condiciones ambientales.
+**Fuente de Energía:**  
+**• Baterías o Paneles Solares:** Según la ubicación y la duración de funcionamiento necesario.
 
-```
+**Elementos de Soporte:**  
+**• Cables y Conectores:** Para conectar sensores y actuadores a los microcontroladores.  
+**• Caja de Protección:** Para resguardar los componentes electrónicos de condiciones ambientales.
+
 ## Objetivos
 
 __Consolidar el Diseño del Prototipo:__ Agrupar toda la documentación relacionada con el diseño y desarrollo del prototipo.  
