@@ -1,5 +1,6 @@
 
-![caratula](E%20Recursos/caratula.png)  
+<center><img src="./E recursos/caratula.png" width="800"></center>
+
 
 # Tecnicatura Superior en Telecomunicaciones
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
@@ -130,4 +131,4 @@ Creación de un cronograma de hitos importantes y sistema de seguimiento de tare
   
 A continuación se detalla gráficamente la asignación de roles para el equipo. 
 
-![caratula](E%20Recursos/EQUIPO%20SCRUM.jpg)
+<center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></center>
