@@ -2,9 +2,9 @@
 <center><img src="./E recursos/image1-8.png" width="800"></center>
 
 
-<center><p style= "font-size: 36px; font-weight: bold; ">Tecnicatura Superior en Telecomunicaciones</p></center>  
+<p style= "font-size: 36px; font-weight: bold; text-align: center; ">Tecnicatura Superior en Telecomunicaciones</p>  
 
-<center><p style= "font-size: 28px; font-weight: bold; ">Formación Profesional: Desarrollador de Dispositivos IoT.</p></center>
+<p style= "font-size: 28px; font-weight: bold; text-align: center; ">Formación Profesional: Desarrollador de Dispositivos IoT.</p>
       
 
 
@@ -39,7 +39,7 @@
 - Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn) 
 
 
-<center><p style= "font-size: 26px; font-weight: bold; ">La Formación Profesional</p></center>
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">La Formación Profesional</p>
  
 El trayecto formativo de "Desarrollador de Dispositivos IoT" busca formar técnicos capacitados para desempeñarse en todas las capas del Internet de las Cosas (IoT), desarrollando, administrando y manteniendo proyectos de IoT. Esto implica:
 
@@ -51,7 +51,7 @@ El trayecto formativo de "Desarrollador de Dispositivos IoT" busca formar técni
 
 • Implementación de medidas de seguridad en dispositivos y redes IoT    
 
-<center><p style= "font-size: 26px; font-weight: bold; ">Información General</p></center>  
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Información General</p>  
 
 El proyecto contenido en este repositorio será llevado a cabo aplicando metodologías agiles como Scrum, a lo largo de 4 Sprints:  
 
@@ -109,7 +109,7 @@ Objetivos:
 
 • Defender el proyecto ante los evaluadores.  
 
-<center><p style= "font-size: 26px; font-weight: bold; ">Organización del repositorio</p></center>  
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Organización del repositorio</p>  
 
 El repositorio se organiza de acuerdo a la siguiente estructura:  
 
@@ -127,16 +127,16 @@ Cada carpeta contiene subcarpetas crrespondientes al desarrollo de cada sprint e
 Esto facilita un acceso más rápido y eficiente a la documentación relevante, asegurando que los avances se integren de manera coherente en cada etapa del proyecto.  
   
   
-<center><p style= "font-size: 26px; font-weight: bold; ">Resumen de la FP: Desarrollador de Dispositivos IoT</p></center>
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Resumen de la FP: Desarrollador de Dispositivos IoT</p>
 
-<center><p style= "font-size: 26px; font-weight: bold; ">Proyecto Central</p></center>    
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Proyecto Central</p>   
 
 Desarrollar un sistema de control y monitoreo distribuido para optimizar el uso y gestión del agua en diferentes entornos.  
 Este controlador, tipo célula, es capaz de abarcar el control general y amplio de jardines, plazas, huertas urbanas, así como grandes plantaciones agrícolas en campos rurales.  
 El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la gestión y monitoreo inteligente de los recursos hídricos locales.
  
 
-<center><p style= "font-size: 26px; font-weight: bold; ">Componentes del Proyecto</p></center>
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Componentes del Proyecto</p>
 
 ### Hardware:
 • **Microcontroladores:** ESP32  
@@ -171,7 +171,7 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
 
 • **Visualización de Datos:** Opciones provistas por docentes desde el cloud.  
   
-<center><p style= "font-size: 26px; font-weight: bold; ">Recursos</p></center>
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Recursos</p>
 
 ```
  Tinkercad
@@ -182,7 +182,7 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
  MicroPython.
  Proteus
 ```
-<center><p style= "font-size: 26px; font-weight: bold; ">Objetivos</p></center>  
+<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Objetivos</p>  
 
 ***
 ## Funcionamiento del Sistema
