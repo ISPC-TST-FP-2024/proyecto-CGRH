@@ -1,5 +1,42 @@
-# Tecnicatura Superior en Telecomunicaciones
-### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
+
+<center><img src="../E recursos/image1-8.png" width="800"></center>
+
+
+<center><p style= "font-size: 36px; font-weight: bold; ">Tecnicatura Superior en Telecomunicaciones</p></center>  
+
+<center><p style= "font-size: 28px; font-weight: bold; ">Formación Profesional: Desarrollador de Dispositivos IoT.</p></center>
+      
+
+
+# Materias que integran la FP:   
+
+## Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
+
+## Sensores y Actuadores, dictada por Prof. Jorge Morales.
+
+## Redes, dictada por Prof. Dante Violi.
+
+
+# Alumnos: 
+- Jose Marquez, GitHub: [@marquezjose](https://github.com/marquezjose).
+- Luciano Lujan, GitHub: [@lucianoilujan](https://github.com/lucianoilujan).
+- Vittorio Durigutti, GitHub: [@vittoriodurigutti](https://github.com/vittoriodurigutti).
+- Fernando Gimenez Coria, GitHub: [@FerCbr](https://github.com/FerCbr).
+- Tiziano Paez, GitHub: [@tpaez](https://github.com/tpaez).
+- Marcos Bordón, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
+- Karina Jazmin Barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
+- Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
+- Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
+- Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
+- Lisandro Juncos, GitHub: [@Lisandro-05](https://github.com/Lisandro-05).
+- Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
+- Joaquin Zalazar, GitHub: [@breaakerr](https://github.com/breaakerr).  
+- Patricio Leandro Roldan, Github: [@pleroldan](https://github.com/pleroldan).
+- Romina Huk,  Github: [@RoHu17](https://github.com/RoHu17).
+- Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
+- Paola Natalia Alejandra Pantoja, Github: [@PaolaaPantoja](https://github.com/PaolaaPantoja).
+- Laura Analia Brizuela, GitHub: [@gerbena03](https://github.com/gerbena03).
+- Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn) 
 ***
 ### Informacion General
 Se crearon carpetas específicas para mejorar la agilidad durante la investigación en cada uno de los Sprints. Para cada Sprint, se implementaron 4 carpetas con el objetivo de organizar mejor la información y optimizar el flujo de trabajo al añadir los datos complementarios.  
