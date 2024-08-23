@@ -183,7 +183,8 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
  Proteus
 ```
 <h2 align=center><strong>Objetivos</strong></h2>  
-***
+***  
+
 ## Funcionamiento del Sistema
 
 ### 1. Recolección de Datos:  
