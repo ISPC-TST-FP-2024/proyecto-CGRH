@@ -1,6 +1,23 @@
-# Tecnicatura Superior en Telecomunicaciones
-### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
-### Alumnos: 
+
+<center><img src="../E recursos/image1-8.png" width="800"></center>
+
+
+<center><p style= "font-size: 36px; font-weight: bold; ">Tecnicatura Superior en Telecomunicaciones</p></center>  
+
+<center><p style= "font-size: 28px; font-weight: bold; ">Formación Profesional: Desarrollador de Dispositivos IoT.</p></center>
+      
+
+
+# Materias que integran la FP:   
+
+## Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
+
+## Sensores y Actuadores, dictada por Prof. Jorge Morales.
+
+## Redes, dictada por Prof. Dante Violi.
+
+
+# Alumnos: 
 - Jose Marquez, GitHub: [@marquezjose](https://github.com/marquezjose).
 - Luciano Lujan, GitHub: [@lucianoilujan](https://github.com/lucianoilujan).
 - Vittorio Durigutti, GitHub: [@vittoriodurigutti](https://github.com/vittoriodurigutti).
