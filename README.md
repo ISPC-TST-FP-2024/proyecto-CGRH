@@ -1,23 +1,23 @@
 
-<center><img src="./E recursos/image1-8.png" width="800"></center>
+<p align=center><img src="./E recursos/image1-8.png" width="900"></p>
 
 
-<p style= "font-size: 36px; font-weight: bold; text-align: center; ">Tecnicatura Superior en Telecomunicaciones</p>  
+<h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
 
-<p style= "font-size: 28px; font-weight: bold; text-align: center; ">Formación Profesional: Desarrollador de Dispositivos IoT.</p>
-      
-
-
-# Materias que integran la FP:   
-
-## Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
-
-## Sensores y Actuadores, dictada por Prof. Jorge Morales.
-
-## Redes, dictada por Prof. Dante Violi.
+<h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
 
 
-# Alumnos: 
+
+## Materias que integran la FP:   
+
+### Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
+
+### Sensores y Actuadores, dictada por Prof. Jorge Morales.
+
+### Redes, dictada por Prof. Dante Violi.
+
+
+## Alumnos: 
 - Jose Marquez, GitHub: [@marquezjose](https://github.com/marquezjose).
 - Luciano Lujan, GitHub: [@lucianoilujan](https://github.com/lucianoilujan).
 - Vittorio Durigutti, GitHub: [@vittoriodurigutti](https://github.com/vittoriodurigutti).
@@ -39,7 +39,7 @@
 - Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn) 
 
 
-<p style= "font-size: 26px; font-weight: bold; text-align: center; ">La Formación Profesional</p>
+<h2 align=center><strong>La Formación Profesional</strong></h2>
  
 El trayecto formativo de "Desarrollador de Dispositivos IoT" busca formar técnicos capacitados para desempeñarse en todas las capas del Internet de las Cosas (IoT), desarrollando, administrando y manteniendo proyectos de IoT. Esto implica:
 
@@ -107,9 +107,9 @@ Objetivos:
 
 • Preparar y entregar la documentación final del proyecto.  
 
-• Defender el proyecto ante los evaluadores.  
+• Defender el proyecto ante los evaluadores.    
 
-<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Organización del repositorio</p>  
+<h2 align=center><strong>Organización del repositorio</strong></h2>  
 
 El repositorio se organiza de acuerdo a la siguiente estructura:  
 
@@ -127,16 +127,16 @@ Cada carpeta contiene subcarpetas crrespondientes al desarrollo de cada sprint e
 Esto facilita un acceso más rápido y eficiente a la documentación relevante, asegurando que los avances se integren de manera coherente en cada etapa del proyecto.  
   
   
-<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Resumen de la FP: Desarrollador de Dispositivos IoT</p>
+<h2 align=center><strong>Resumen de la FP: Desarrollador de Dispositivos IoT</strong></h2>
 
-<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Proyecto Central</p>   
+<h2 align=center><strong>Proyecto Central</strong></h2>  
 
 Desarrollar un sistema de control y monitoreo distribuido para optimizar el uso y gestión del agua en diferentes entornos.  
 Este controlador, tipo célula, es capaz de abarcar el control general y amplio de jardines, plazas, huertas urbanas, así como grandes plantaciones agrícolas en campos rurales.  
 El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la gestión y monitoreo inteligente de los recursos hídricos locales.
  
 
-<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Componentes del Proyecto</p>
+<h2 align=center><strong>Componentes del Proyecto</strong></h2>  
 
 ### Hardware:
 • **Microcontroladores:** ESP32  
@@ -171,7 +171,7 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
 
 • **Visualización de Datos:** Opciones provistas por docentes desde el cloud.  
   
-<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Recursos</p>
+<h2 align=center><strong>Recursos</strong></h2>  
 
 ```
  Tinkercad
@@ -182,8 +182,7 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
  MicroPython.
  Proteus
 ```
-<p style= "font-size: 26px; font-weight: bold; text-align: center; ">Objetivos</p>  
-
+<h2 align=center><strong>Objetivos</strong></h2>  
 ***
 ## Funcionamiento del Sistema
 
@@ -248,4 +247,4 @@ Creación de un cronograma de hitos importantes y sistema de seguimiento de tare
   
 A continuación se detalla gráficamente la asignación de roles para el equipo. 
 
-<center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></center>
+<p align=center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></p>

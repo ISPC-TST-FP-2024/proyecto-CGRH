@@ -1,10 +1,10 @@
 
-<center><img src="../E recursos/image1-8.png" width="800"></center>
+<p align=center><img src="./E recursos/image1-8.png" width="900"></p>
 
 
-<center><p style= "font-size: 36px; font-weight: bold; ">Tecnicatura Superior en Telecomunicaciones</p></center>  
+<h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
 
-<center><p style= "font-size: 28px; font-weight: bold; ">Formación Profesional: Desarrollador de Dispositivos IoT.</p></center>
+<h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
       
 
 
