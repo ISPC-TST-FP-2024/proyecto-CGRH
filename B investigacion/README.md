@@ -1,43 +1,6 @@
 
 <p align=center><img src="../E recursos/image1-8.png" width="900"></p>
 
-
-<h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
-
-<h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
-      
-
-
-# Materias que integran la FP:   
-
-## Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
-
-## Sensores y Actuadores, dictada por Prof. Jorge Morales.
-
-## Redes, dictada por Prof. Dante Violi.
-
-
-# Alumnos: 
-- Jose Marquez, GitHub: [@marquezjose](https://github.com/marquezjose).
-- Luciano Lujan, GitHub: [@lucianoilujan](https://github.com/lucianoilujan).
-- Vittorio Durigutti, GitHub: [@vittoriodurigutti](https://github.com/vittoriodurigutti).
-- Fernando Gimenez Coria, GitHub: [@FerCbr](https://github.com/FerCbr).
-- Tiziano Paez, GitHub: [@tpaez](https://github.com/tpaez).
-- Marcos Bordón, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
-- Karina Jazmin Barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
-- Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
-- Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
-- Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
-- Lisandro Juncos, GitHub: [@Lisandro-05](https://github.com/Lisandro-05).
-- Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
-- Joaquin Zalazar, GitHub: [@breaakerr](https://github.com/breaakerr).  
-- Patricio Leandro Roldan, Github: [@pleroldan](https://github.com/pleroldan).
-- Romina Huk,  Github: [@RoHu17](https://github.com/RoHu17).
-- Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
-- Paola Natalia Alejandra Pantoja, Github: [@PaolaaPantoja](https://github.com/PaolaaPantoja).
-- Laura Analia Brizuela, GitHub: [@gerbena03](https://github.com/gerbena03).
-- Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn) 
-***
 ### Informacion General
 Se crearon carpetas específicas para mejorar la agilidad durante la investigación en cada uno de los Sprints. Para cada Sprint, se implementaron 4 carpetas con el objetivo de organizar mejor la información y optimizar el flujo de trabajo al añadir los datos complementarios.  
  Esto facilita un acceso más rápido y eficiente a la documentación relevante, asegurando que los avances se integren de manera coherente en cada etapa del proyecto.  
@@ -81,6 +44,11 @@ __Facilitar la Comunicación:__ Sirve como un recurso centralizado para la comun
 
 __Apoyar la Documentación Final:__ Contribuir a la elaboración de informes, presentaciones y publicaciones finales al proporcionar toda la información necesaria de manera organizada.  
 ***
+## Estado 
+**Fecha**: 30 de Agosto de 2024
+**Sprint**: 1
+**Historia de usuario**: uh#3
+
 ## Actualizacion
 ***
 **20240815**   
@@ -90,3 +58,53 @@ los subi en word por que falta mas informacion por favor revisar y corregir.
 **20240820**  
 Se implementaron 4 carpetas por Sprint para mejorar la organización y agilizar el proceso de investigación, facilitando el acceso y la integración de los datos en cada etapa del proyecto.  
 ***
+**20240830**  
+Se debe actualizar la informacion de las carpetas de acuerdo a los siguientes detalles (datasheet de sensores y actuadores. Protocolos spi, i2c):  
+
+![Conexiones](../E%20recursos/Conexion%20fp_controlador_cultivo.png)
+
+**Entradas Analógicas y Digitales:**  
+
+1.	Sensores de Humedad del Suelo (HW-080) (x3):
+o	Sensor 1: GPIO36 (ADC1_CHANNEL_0)
+o	Sensor 2: GPIO39 (ADC1_CHANNEL_3)
+o	Sensor 3: GPIO34 (ADC1_CHANNEL_6)
+2.	DHT11 (Temperatura y Humedad):
+o	GPIO14 (Digital)
+3.	Sensor de Lluvia (AB119):
+o	GPIO33 (Digital)
+4.	Sensor Ultrasónico (HC-SR04):
+o	Trigger: GPIO12
+o	Echo: GPIO13
+5.	LDR (Luz Ambiente):
+o	GPIO32 (ADC1_CHANNEL_4)
+6.	Micrófono Electret:
+o	GPIO35 (ADC1_CHANNEL_7)
+7.	Sensores PIR (HCSR501) (x3):
+o	Sensor 1: GPIO25
+o	Sensor 2: GPIO26
+o	Sensor 3: GPIO27  
+
+**Salidas:**
+1.	Tira LED WS2812B:
+o	GPIO15 (Digital)
+2.	Módulo de Relé de 4 Canales:
+o	Canal 1 (Bomba de Agua): GPIO4
+o	Canal 2 (Válvula 1): GPIO16
+o	Canal 3 (Válvula 2): GPIO17
+o	Canal 4 (Válvula 3): GPIO0  
+
+**Interfaces de Comunicación:**
+SPI:  
+-	MOSI: GPIO23
+-	MISO: GPIO19
+-	SCK: GPIO18
+-	SS (NSS): GPIO5  
+I2C:  
+-	SCL: GPIO22
+-	SDA: GPIO21  
+  
+**Distribucion de Componentes**  
+
+![Distribucion de componentes](../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)
+

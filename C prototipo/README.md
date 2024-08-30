@@ -2,42 +2,6 @@
 <p align=center><img src="../E recursos/image1-8.png" width="900"></p>
 
 
-<h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
-
-<h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
-      
-
-
-# Materias que integran la FP:   
-
-## Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
-
-## Sensores y Actuadores, dictada por Prof. Jorge Morales.
-
-## Redes, dictada por Prof. Dante Violi.
-
-
-# Alumnos: 
-- Jose Marquez, GitHub: [@marquezjose](https://github.com/marquezjose).
-- Luciano Lujan, GitHub: [@lucianoilujan](https://github.com/lucianoilujan).
-- Vittorio Durigutti, GitHub: [@vittoriodurigutti](https://github.com/vittoriodurigutti).
-- Fernando Gimenez Coria, GitHub: [@FerCbr](https://github.com/FerCbr).
-- Tiziano Paez, GitHub: [@tpaez](https://github.com/tpaez).
-- Marcos Bordón, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
-- Karina Jazmin Barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
-- Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
-- Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
-- Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
-- Lisandro Juncos, GitHub: [@Lisandro-05](https://github.com/Lisandro-05).
-- Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
-- Joaquin Zalazar, GitHub: [@breaakerr](https://github.com/breaakerr).  
-- Patricio Leandro Roldan, Github: [@pleroldan](https://github.com/pleroldan).
-- Romina Huk,  Github: [@RoHu17](https://github.com/RoHu17).
-- Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
-- Paola Natalia Alejandra Pantoja, Github: [@PaolaaPantoja](https://github.com/PaolaaPantoja).
-- Laura Analia Brizuela, GitHub: [@gerbena03](https://github.com/gerbena03).
-- Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn)
-
 ## Informacion General
 ***
 ### Carpeta: ***D Prototipo*** 
@@ -123,7 +87,35 @@ __Documentar Problemas y Soluciones:__ Registrar cualquier Problemas encontrado 
 
 __Apoyar la Comunicación y Colaboración:__ Sirve como un recurso central para los miembros del equipo, permitiendo un acceso fácil y claro a toda la información relevante del prototipo.  
 
+## Estado
+**Fecha**: 30 de Agosto de 2024  
+**Sprint**: 1
+**Historia de usuario**: uh#3  
 
-## Actualizacion
+## Avances 
+***
 20240815
-Se actualizo Readme.
+Se actualizo Readme.  
+
+***  
+### Semana 3: UH#3 
+#### Sprint Backlog - Sprint 1
+
+- [ ] 1. **Instalación física de sensores:** uh3tk1_2_3 completado. 
+- [ ] 2. **Instalación física de actuadores:**
+- [ ] 3. **Conexión de sensores al ESP32:**
+- [ ] 4. **Conexión de actuadores al ESP32:**
+- [ ] 5. **Realización de pruebas iniciales de sensores:**
+- [ ] 6. **Realización de pruebas iniciales de actuadores:**  
+  
+![Distribucion](../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)  
+
+---  
+- [ ] 7. **Configuración de librerías necesarias en ESP32:**
+- [ ] 8. **Documentación de los pasos de instalación:**
+- [ ] 9. **Registro de resultados de pruebas iniciales:**
+- [ ] 10. **Ajustes y calibraciones necesarias:**
+- [ ] 11. **Preparación de un informe de pruebas iniciales:**
+- [ ] 12. **Presentación de los resultados de pruebas al equipo:**
+
+
