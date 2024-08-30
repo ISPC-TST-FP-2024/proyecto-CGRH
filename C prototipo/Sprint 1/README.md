@@ -17,76 +17,129 @@ __Problemas y Soluciones:__ Descripción de problemas encontrados durante el des
 
 __Referencias y Recursos:__ Cualquier recurso adicional, como manuales, guías técnicas y referencias relevantes para el desarrollo del prototipo.
 ***
+### Avance 1: Definición de Componentes y Funcionalidades  
+! Completar !!!  
+***  
 
+### Avance 2: Diseño y Planificación del Prototipo  
+! Completar !!!  
+***  
 
-## Recursos
-#### Software 💻
-
-**Entorno de Desarrollo:**  
-**• VSCode:** Para escribir y gestionar el código.
-PlatformIO: Para facilitar el desarrollo con ESP32 y otros microcontroladores.
-Lenguaje de Programación:
-
-**• C/C++:** Común para la programación de microcontroladores.
-Python: Para scripts de procesamiento de datos o control.
-
-**Bibliotecas y Frameworks:**  
-**• Arduino Libraries:** Para trabajar con sensores y módulos específicos.
-ESP-IDF o Arduino Core para ESP32: Para programación específica del ESP32.  
-
-**Herramientas de Comunicación:**  
-**• MQTT Broker:** Para la comunicación entre dispositivos y el servidor central.
-Protocolos de Comunicación: Implementación de MQTT, HTTP/HTTPS para enviar y recibir datos.
-
-**Visualización y Control:**  
-**• Interfaz Web:** Para monitorear y controlar el sistema desde un navegador (puedes usar frameworks como React, Vue.js, o simplemente HTML/CSS/JavaScript).
-Plataformas en la Nube: AWS, Azure, o Google Cloud para almacenar datos y manejar la visualización en la nube.
-
-**Control de Versiones:**  
-**• Git:** Para el control de versiones del código y la colaboración en el desarrollo (usualmente acompañado de GitHub, GitLab o Bitbucket).
-
-
-#### Hardware ⚙
-
-**Microcontroladores:**  
-**• ESP32:** Ideal por su conectividad (WiFi y Bluetooth) y capacidad de procesamiento.
-
-**Sensores:**  
-**• Sensor de Humedad del Suelo:** Para medir la humedad en el suelo.  
-**• Sensor de pH:** Para medir el pH del suelo o del agua.  
-**• Sensor de Lluvia:** Para detectar precipitaciones y ajustar el riego en consecuencia.  
-**• Sensor de Temperatura:** Para medir la temperatura ambiental.
-
-**Módulos de Comunicación:**  
-**• Módulos LoRa:** Para comunicación de largo alcance, ideal en áreas rurales.  
-**• Módulos Zigbee o Thread:** Para redes de sensores de corto a medio alcance.  
-
-**Actuadores:**  
-**• Válvulas de Riego:** Para controlar el flujo de agua.  
-**• Bombas de Agua:** Si el sistema necesita bombear agua desde una fuente externa.
-
-**Fuente de Energía:**  
-**• Baterías o Paneles Solares:** Según la ubicación y la duración de funcionamiento necesario.
-
-**Elementos de Soporte:**  
-**• Cables y Conectores:** Para conectar sensores y actuadores a los microcontroladores.  
-**• Caja de Protección:** Para resguardar los componentes electrónicos de condiciones ambientales.
+### Avance 3: Instalación y Pruebas Iniciales de Hardware
 
 ## Objetivos
+- **Instalar sensores y actuadores seleccionados**: Configurar y conectar los componentes hardware.
+- **Realizar pruebas iniciales de funcionamiento**: Verificar que los componentes funcionen correctamente.
+- **Configurar dispositivos y librerías en ESP32**: Asegurar la correcta integración de hardware con el microcontrolador.
+- **Documentar resultados de pruebas iniciales**: Crear reportes de las pruebas realizadas y los resultados obtenidos.
 
-__Consolidar el Diseño del Prototipo:__ Agrupar toda la documentación relacionada con el diseño y desarrollo del prototipo.  
+## Desarrollo: Semana 3
+- **Materia Responsable**: Electrónica Microcontrolada
+- **Objetivo de la Semana**: Instalar y probar los sensores y actuadores seleccionados.
 
-__Registrar el Proceso de Desarrollo:__ Documentar detalladamente cada etapa del proceso de construcción del prototipo, desde la concepción inicial hasta la implementación final, para asegurar una trazabilidad completa.
+### Actividades
+1. **Instalación física de sensores y actuadores** (Completada)
+   - Se realizó la instalación física de los sensores y actuadores en la estructura del sistema.
+   - Se conectaron los componentes al microcontrolador ESP32 según el esquema de conexión.
+   
+![Descripcion de componentes]()
+   
+2. **Conexión de los componentes al microcontrolador ESP32**
+   - Conexión de sensores de humedad, DHT11, sensor de lluvia, sensor ultrasónico, LDR, micrófono electret y sensores PIR.
+   - Conexión de actuadores: Tira LED WS2812B y módulo de relé de 4 canales.
+   
+   ![Conexión del Controlador]()
 
-__Centralizar la Información Técnica:__ Mantener un archivo organizado con todos los datos técnicos, materiales utilizados, y configuraciones del prototipo, facilitando su análisis y futuras modificaciones.  
+3. **Realización de pruebas iniciales de funcionamiento**
+   - Verificación del correcto funcionamiento de los sensores y actuadores.
+   - Configuración inicial de las librerías necesarias en el ESP32.
 
-__Facilitar la Evaluación y Pruebas:__ Incluir los resultados de las pruebas realizadas al prototipo, así como cualquier ajuste o mejora implementada en base a ese protoripo.
+4. **Configuración de librerías en ESP32**
+   - Integración y configuración de las librerías de los sensores y actuadores en el código del ESP32.
 
-__Documentar Problemas y Soluciones:__ Registrar cualquier Problemas encontrado durante el desarrollo del prototipo y las soluciones adoptadas.
+5. **Documentación de los resultados de las pruebas iniciales**
+   - Registro detallado de los pasos de instalación y configuración.
+   - Ajustes y calibraciones necesarias basadas en los resultados de las pruebas.
+   - Preparación de un informe de pruebas iniciales y presentación de los resultados al equipo.
 
-__Apoyar la Comunicación y Colaboración:__ Sirve como un recurso central para los miembros del equipo, permitiendo un acceso fácil y claro a toda la información relevante del prototipo.  
+## Resultados Concretos Esperados
+- Sensores y actuadores instalados y conectados al ESP32.
+- Librerías configuradas en ESP32.
+- Informe de pruebas iniciales documentado.
+- Ajustes y calibraciones realizados.
+- Presentación de resultados de pruebas al equipo.
 
+## Historia de Usuario
+"YO COMO estudiante QUIERO instalar y probar los sensores y actuadores PARA asegurar su correcto funcionamiento en el proyecto IoT."
 
-## Actualizacion
-20240815
-Se actualizo Readme.
+## Sprint 1 [Product Backlog]
+- Instalación física de sensores.
+- Instalación física de actuadores.
+- Conexión de sensores al ESP32.
+- Conexión de actuadores al ESP32.
+- Realización de pruebas iniciales de sensores.
+- Realización de pruebas iniciales de actuadores.
+- Configuración de librerías necesarias en ESP32.
+- Documentación de los pasos de instalación.
+- Registro de resultados de pruebas iniciales.
+- Ajustes y calibraciones necesarias.
+- Preparación de un informe de pruebas iniciales.
+- Presentación de los resultados de pruebas al equipo.
+
+## Esquema de Conexión de Componentes
+
+### Entradas Analógicas y Digitales
+1. **Sensores de Humedad del Suelo (HW-080) (x3):**
+   - Sensor 1: GPIO36 (ADC1_CHANNEL_0)
+   - Sensor 2: GPIO39 (ADC1_CHANNEL_3)
+   - Sensor 3: GPIO34 (ADC1_CHANNEL_6)
+2. **DHT11 (Temperatura y Humedad):**
+   - GPIO14 (Digital)
+3. **Sensor de Lluvia (AB119):**
+   - GPIO33 (Digital)
+4. **Sensor Ultrasónico (HC-SR04):**
+   - Trigger: GPIO12
+   - Echo: GPIO13
+5. **LDR (Luz Ambiente):**
+   - GPIO32 (ADC1_CHANNEL_4)
+6. **Micrófono Electret:**
+   - GPIO35 (ADC1_CHANNEL_7)
+7. **Sensores PIR (HCSR501) (x3):**
+   - Sensor 1: GPIO25
+   - Sensor 2: GPIO26
+   - Sensor 3: GPIO27
+
+### Salidas
+1. **Tira LED WS2812B:**
+   - GPIO15 (Digital)
+2. **Módulo de Relé de 4 Canales:**
+   - Canal 1 (Bomba de Agua): GPIO4
+   - Canal 2 (Válvula 1): GPIO16
+   - Canal 3 (Válvula 2): GPIO17
+   - Canal 4 (Válvula 3): GPIO0
+
+### Interfaces de Comunicación
+- **SPI:**
+  - MOSI: GPIO23
+  - MISO: GPIO19
+  - SCK: GPIO18
+  - SS (NSS): GPIO5
+- **I2C:**
+  - SCL: GPIO22
+  - SDA: GPIO21
+
+## Resumen Completo
+- **Entradas Analógicas:**
+  - GPIO36, GPIO39, GPIO34, GPIO32, GPIO35
+- **Entradas Digitales:**
+  - GPIO14, GPIO33, GPIO12, GPIO13, GPIO25, GPIO26, GPIO27
+- **Salidas Digitales:**
+  - GPIO15 (tira LED), GPIO4 (Relé Canal 1), GPIO16 (Relé Canal 2), GPIO17 (Relé Canal 3), GPIO0 (Relé Canal 4)
+- **SPI:**
+  - MOSI: GPIO23
+  - MISO: GPIO19
+  - SCK: GPIO18
+  - SS: GPIO5
+- **I2C:**
+  - SCL: GPIO22
+  - SDA: GPIO21

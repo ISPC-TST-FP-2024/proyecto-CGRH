@@ -2,48 +2,12 @@
 <p align=center><img src="../E recursos/image1-8.png" width="900"></p>
 
 
-<h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
-
-<h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
-      
-
-
-# Materias que integran la FP:   
-
-## Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
-
-## Sensores y Actuadores, dictada por Prof. Jorge Morales.
-
-## Redes, dictada por Prof. Dante Violi.
-
-
-# Alumnos: 
-- Jose Marquez, GitHub: [@marquezjose](https://github.com/marquezjose).
-- Luciano Lujan, GitHub: [@lucianoilujan](https://github.com/lucianoilujan).
-- Vittorio Durigutti, GitHub: [@vittoriodurigutti](https://github.com/vittoriodurigutti).
-- Fernando Gimenez Coria, GitHub: [@FerCbr](https://github.com/FerCbr).
-- Tiziano Paez, GitHub: [@tpaez](https://github.com/tpaez).
-- Marcos Bordón, GitHub: [@Marcos-BR-03](https://github.com/Marcos-BR-03).
-- Karina Jazmin Barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
-- Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
-- Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
-- Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
-- Lisandro Juncos, GitHub: [@Lisandro-05](https://github.com/Lisandro-05).
-- Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
-- Joaquin Zalazar, GitHub: [@breaakerr](https://github.com/breaakerr).  
-- Patricio Leandro Roldan, Github: [@pleroldan](https://github.com/pleroldan).
-- Romina Huk,  Github: [@RoHu17](https://github.com/RoHu17).
-- Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
-- Paola Natalia Alejandra Pantoja, Github: [@PaolaaPantoja](https://github.com/PaolaaPantoja).
-- Laura Analia Brizuela, GitHub: [@gerbena03](https://github.com/gerbena03).
-- Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn)
- 
 ### Informacion General
 
 Desarrollar un sistema de control y monitoreo distribuido para optimizar el uso y gestión del agua en diferentes entornos. Este controlador, tipo célula, es capaz de abarcar el control general y amplio de jardines, plazas, huertas urbanas, así como grandes plantaciones agrícolas en campos rurales. El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la gestión y monitoreo inteligente de los recursos hídricos locales.
 
 Carpeta: ***A Requisitos***
-# Requisitos
+## Requisitos
 
  __La carpeta "A Requisitos" está destinada a recopilar y organizar toda la información relacionada con los requisitos del proyecto. Esta carpeta incluye:__
 
@@ -60,31 +24,55 @@ __Casos de Uso y Escenarios:__ Ejemplos prácticos y casos de uso que ilustran c
 __Criterios de Aceptación:__ Parámetros y condiciones que deben cumplirse para que los entregables del proyecto sean aceptados y considerados completos.    
 
 
-## Recursos
-__Software__ 💻
-```
-Microsoft Word / Google Docs
-Lucidchart / Microsoft Visio
-Trello / Jira
-Microsoft Excel / Google Sheets
-Meet / Microsoft Teams
-```
-## Objetivos
-__Identificación Clara del Problema:__ Definir y documentar los requisitos que describen el problema principal que el proyecto busca resolver, asegurando que todos los miembros del equipo comprendan la naturaleza del desafío a enfrentar.
+### Estado del proyecto
+- Fecha: 30 de agosto de 2024
+- Sprint: 1
+- Historia de usuario: 3
+- Semana: 3
 
-__Centralización de Información Crítica:__ Reunir y organizar toda la información esencial relacionada con los requisitos funcionales y no funcionales, sirviendo como un punto de referencia clave para el equipo durante el proceso de investigación y desarrollo.
+### Detalles del UH#3 Sprint 1  
+**Instalación y Pruebas Iniciales de Hardware**
 
-__Guía para la Solución:__ Proveer un marco claro y estructurado que guíe el desarrollo del proyecto, alineando las soluciones propuestas con los requisitos establecidos desde el principio.
+#### Objetivos:
+- **Instalar sensores y actuadores seleccionados:** Configurar y conectar los componentes hardware.
+- **Realizar pruebas iniciales de funcionamiento:** Verificar que los componentes funcionen correctamente.
+- **Configurar dispositivos y librerías en ESP32:** Asegurar la correcta integración de hardware con el microcontrolador.
+- **Documentar resultados de pruebas iniciales:** Crear reportes de las pruebas realizadas y los resultados obtenidos.
 
-__Validación del Proceso de Investigación:__ Utilizar los requisitos como criterios para evaluar la validez y efectividad de las soluciones propuestas durante las distintas etapas del proyecto, asegurando que las propuestas están alineadas con los objetivos iniciales.
+#### Desarrollo:
+##### Semana 3: Instalación y Pruebas Iniciales de Hardware
+- **Materia Responsable:** Electrónica Microcontrolada
+- **Objetivo de la Semana:** Instalar y probar los sensores y actuadores seleccionados.
+- **Actividades:**
+  - Instalación física de sensores y actuadores.
+  - Conexión de los componentes al microcontrolador ESP32.
+  - Realización de pruebas iniciales de funcionamiento.
+  - Configuración de librerías en ESP32.
+  - Documentación de los resultados de las pruebas iniciales.
+  - Ajustes y calibraciones necesarias basadas en los resultados de las pruebas.
+  - Preparación de un informe de pruebas iniciales y presentación de los resultados al equipo.
 
-__Facilitación de la Colaboración y Comunicación:__ Actuar como un recurso compartido que facilite la colaboración y el entendimiento común entre todos los miembros del equipo, asegurando que las discusiones y decisiones estén basadas en un conjunto común de requisitos.
+#### Resultados Concretos Esperados:
+- Sensores y actuadores instalados y conectados al ESP32.
+- Librerías configuradas en ESP32.
+- Informe de pruebas iniciales documentado.
+- Ajustes y calibraciones realizados.
+- Presentación de resultados de pruebas al equipo.
 
+#### Historia de Usuario:
+- "**YO COMO** estudiante **QUIERO** instalar y probar los sensores y actuadores **PARA** asegurar su correcto funcionamiento en el proyecto IoT."  
+  
 
-## Actualizacion
-```
-20240815
-Se actualizo Readme.
-Se agrego PDF programa FP_Desarrollador_iot.
-Se agrego PDF  Sprint 1,2,3,4.
-```
+#### Sprint 1 [Product Backlog]:
+- [ ] Instalación física de sensores.
+- [ ] Instalación física de actuadores.
+- [ ] Conexión de sensores al ESP32.
+- [ ] Conexión de actuadores al ESP32.
+- [ ] Realización de pruebas iniciales de sensores.
+- [ ] Realización de pruebas iniciales de actuadores.
+- [ ] Configuración de librerías necesarias en ESP32.
+- [ ] Documentación de los pasos de instalación.
+- [ ] Registro de resultados de pruebas iniciales.
+- [ ] Ajustes y calibraciones necesarias.
+- [ ] Preparación de un informe de pruebas iniciales.
+- [ ] Presentación de los resultados de pruebas al equipo.
