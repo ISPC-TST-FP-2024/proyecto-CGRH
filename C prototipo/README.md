@@ -97,12 +97,13 @@ __Apoyar la Comunicación y Colaboración:__ Sirve como un recurso central para 
 20240815
 Se actualizo Readme.  
 
-***  
+*** 
+01092024  
 ### Semana 3: UH#3 
 #### Sprint Backlog - Sprint 1
 
-- [ ] 1. **Instalación física de sensores:** uh3tk1_2_3 completado. 
-- [ ] 2. **Instalación física de actuadores:**
+- [x] 1. **Instalación física de sensores:** uh3tk1_2_3 completado. 
+- [x] 2. **Instalación física de actuadores:** uh3tk4_5_6 completado.
 - [ ] 3. **Conexión de sensores al ESP32:**
 - [ ] 4. **Conexión de actuadores al ESP32:**
 - [ ] 5. **Realización de pruebas iniciales de sensores:**

@@ -36,7 +36,12 @@
 - Nahuel Vélez, GitHub: [@Nahuelvelez](https://github.com/Nahuelvelez).
 - Paola Natalia Alejandra Pantoja, Github: [@PaolaaPantoja](https://github.com/PaolaaPantoja).
 - Laura Analia Brizuela, GitHub: [@gerbena03](https://github.com/gerbena03).
-- Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn) 
+- Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn)  
+
+---  
+**Organizacion y Asignacion de roles para el equipo.**
+
+<p align=center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></p> 
 
 
 <h2 align=center><strong>La Formación Profesional</strong></h2>
@@ -225,27 +230,25 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
 ## Actualización
 ***
 
-### Semana 1: Definición de Requerimientos y Planificación Inicial  
+### Semana 3: UH#3 
+#### Sprint Backlog - Sprint 1
 
- 
-**Objetivo de la Semana:** Definir la arquitectura de red, planificar la comunicación, identificar variables y definir conceptos básicos del proyecto IoT.  
-
-### Actividades:
-Reunión inicial para discutir el alcance del proyecto y asignación de roles y responsabilidades.  ✔   
-
-Investigación y documentación de métodos y protocolos de comunicación (LoRa, MQTT).  ✔    
-
-Identificación y listado de variables a sensorizar (humedad del suelo, pH, lluvia, temperatura).  ✔   
-
-Diseño inicial de la arquitectura de red. ✔   
-
-Configuración de repositorios Git y GitHub. ✔    
-
-Creación de un cronograma de hitos importantes y sistema de seguimiento de tareas (Kanban).  ✔  
-
-***
-**uh1tk19** Documentación de roles y responsabilidades.
+- [x] 1. **Instalación física de sensores:** uh3tk1_2_3 completado. 
+- [x] 2. **Instalación física de actuadores:** uh3tk4_5_6 completado.  
   
-A continuación se detalla gráficamente la asignación de roles para el equipo. 
+***  
+![Distribucion fisica](./E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)  
+***  
+---  
+- [ ] 3. **Conexión de sensores al ESP32:**
+- [ ] 4. **Conexión de actuadores al ESP32:**
+- [ ] 5. **Realización de pruebas iniciales de sensores:**
+- [ ] 6. **Realización de pruebas iniciales de actuadores:**  
+- [ ] 7. **Configuración de librerías necesarias en ESP32:**
+- [ ] 8. **Documentación de los pasos de instalación:**
+- [ ] 9. **Registro de resultados de pruebas iniciales:**
+- [ ] 10. **Ajustes y calibraciones necesarias:**
+- [ ] 11. **Preparación de un informe de pruebas iniciales:**
+- [ ] 12. **Presentación de los resultados de pruebas al equipo:**
+  
 
-<p align=center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></p>
