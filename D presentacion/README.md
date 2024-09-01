@@ -87,7 +87,7 @@ a) Video explicativo de la distribucion de componentes en el cultivo vertical:
 
 ***   
   
-b) Video explicativo del conexionado de componentes en el controlador del cultivo vertical: 
+b) Video explicativo del conexionado de componentes: sensores, actuadores y modulos de comunicacion, en el controlador del cultivo vertical: 
 [![Conexionado](../E%20recursos/Conexion%20fp_controlador_cultivo.png)](https://drive.google.com/file/d/1-KXzR4QRcKExQlvRLP5vxHkXHMBflkuW/view?usp=drive_link)  
   
 ***

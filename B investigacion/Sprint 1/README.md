@@ -100,4 +100,4 @@ I2C:
   
 **Distribucion de Componentes**  
 
-![Distribucion de componentes](../../E%20recursos/E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)
+![Distribucion de componentes](../../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)
