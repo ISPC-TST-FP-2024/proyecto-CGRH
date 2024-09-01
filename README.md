@@ -237,11 +237,18 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
 - [x] 2. **Instalación física de actuadores:** uh3tk4_5_6 completado.  
   
 ***  
-![Distribucion fisica](./E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)  
+Video explicativo de la distribucion de componentes en el cultivo vertical: 
+[![Distribucion](./E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)](https://drive.google.com/file/d/10E275Am75Gu9GCZY3UnhghImSjLai_dZ/view?usp=drive_link)    
 ***  
 ---  
-- [ ] 3. **Conexión de sensores al ESP32:**
-- [ ] 4. **Conexión de actuadores al ESP32:**
+- [x] 3. **Conexión de sensores al ESP32:**
+- [ ] 4. **Conexión de actuadores al ESP32:**  
+  
+***
+Video explicativo del conexionado de componentes en el controlador del cultivo vertical: 
+[![Conexionado](./E%20recursos/Conexion%20fp_controlador_cultivo.png)](https://drive.google.com/file/d/1-KXzR4QRcKExQlvRLP5vxHkXHMBflkuW/view?usp=drive_link)
+***
+---
 - [ ] 5. **Realización de pruebas iniciales de sensores:**
 - [ ] 6. **Realización de pruebas iniciales de actuadores:**  
 - [ ] 7. **Configuración de librerías necesarias en ESP32:**

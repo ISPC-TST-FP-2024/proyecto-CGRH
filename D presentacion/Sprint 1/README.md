@@ -37,8 +37,21 @@ __Desarrollar un Video Explicativo:__ Crear un video corto y efectivo que resuma
 
 __Optimizar la Comunicación del Proyecto:__ Garantizar que la presentación sea clara, profesional y capaz de transmitir los objetivos, metodología, resultados y conclusiones del proyecto de manera efectiva. 
 
-
-
 ## Actualizacion
 20240815
-Se actualizo Readme.
+Se actualizo Readme.  
+  
+***  
+
+**20240828**
+  
+
+a) video explicativo de la distribucion de componentes en el cultivo vertical: 
+[![Distribucion](../../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)](https://drive.google.com/file/d/10E275Am75Gu9GCZY3UnhghImSjLai_dZ/view?usp=drive_link)  
+
+***   
+  
+b) Video explicativo del conexionado de componentes en el controlador del cultivo vertical: 
+[![Conexionado](../../E%20recursos/Conexion%20fp_controlador_cultivo.png)](https://drive.google.com/file/d/1-KXzR4QRcKExQlvRLP5vxHkXHMBflkuW/view?usp=drive_link)  
+  
+***

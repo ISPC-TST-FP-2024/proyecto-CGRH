@@ -51,4 +51,53 @@ __Apoyar la Documentación Final:__ Contribuir a la elaboración de informes, pr
  
 **20240820**  
 Se implementaron 4 carpetas por Sprint para mejorar la organización y agilizar el proceso de investigación, facilitando el acceso y la integración de los datos en cada etapa del proyecto.  
-***
+***  
+**20240830**  
+Se debe actualizar la informacion de las carpetas de acuerdo a los siguientes detalles (datasheet de sensores y actuadores. Protocolos spi, i2c):  
+
+![Conexiones](../../E%20recursos/Conexion%20fp_controlador_cultivo.png)
+
+**Entradas Analógicas y Digitales:**  
+
+1.	Sensores de Humedad del Suelo (HW-080) (x3):
+o	Sensor 1: GPIO36 (ADC1_CHANNEL_0)
+o	Sensor 2: GPIO39 (ADC1_CHANNEL_3)
+o	Sensor 3: GPIO34 (ADC1_CHANNEL_6)
+2.	DHT11 (Temperatura y Humedad):
+o	GPIO14 (Digital)
+3.	Sensor de Lluvia (AB119):
+o	GPIO33 (Digital)
+4.	Sensor Ultrasónico (HC-SR04):
+o	Trigger: GPIO12
+o	Echo: GPIO13
+5.	LDR (Luz Ambiente):
+o	GPIO32 (ADC1_CHANNEL_4)
+6.	Micrófono Electret:
+o	GPIO35 (ADC1_CHANNEL_7)
+7.	Sensores PIR (HCSR501) (x3):
+o	Sensor 1: GPIO25
+o	Sensor 2: GPIO26
+o	Sensor 3: GPIO27  
+
+**Salidas:**
+1.	Tira LED WS2812B:
+o	GPIO15 (Digital)
+2.	Módulo de Relé de 4 Canales:
+o	Canal 1 (Bomba de Agua): GPIO4
+o	Canal 2 (Válvula 1): GPIO16
+o	Canal 3 (Válvula 2): GPIO17
+o	Canal 4 (Válvula 3): GPIO0  
+
+**Interfaces de Comunicación:**
+SPI:  
+-	MOSI: GPIO23
+-	MISO: GPIO19
+-	SCK: GPIO18
+-	SS (NSS): GPIO5  
+I2C:  
+-	SCL: GPIO22
+-	SDA: GPIO21  
+  
+**Distribucion de Componentes**  
+
+![Distribucion de componentes](../../E%20recursos/E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)

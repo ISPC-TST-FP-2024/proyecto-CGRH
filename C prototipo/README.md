@@ -103,13 +103,19 @@ Se actualizo Readme.
 #### Sprint Backlog - Sprint 1
 
 - [x] 1. **Instalación física de sensores:** uh3tk1_2_3 completado. 
-- [x] 2. **Instalación física de actuadores:** uh3tk4_5_6 completado.
-- [ ] 3. **Conexión de sensores al ESP32:**
-- [ ] 4. **Conexión de actuadores al ESP32:**
-- [ ] 5. **Realización de pruebas iniciales de sensores:**
-- [ ] 6. **Realización de pruebas iniciales de actuadores:**  
+- [x] 2. **Instalación física de actuadores:** uh3tk4_5_6 completado.  
   
 ![Distribucion](../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)  
+***  
+  
+- [x] 3. **Conexión de sensores al ESP32:** uh3tk7_8_9 completado.
+- [ ] 4. **Conexión de actuadores al ESP32:**  
+  
+![Conexiones](../E%20recursos/Conexion%20fp_controlador_cultivo.png)  
+***  
+  
+- [ ] 5. **Realización de pruebas iniciales de sensores:**
+- [ ] 6. **Realización de pruebas iniciales de actuadores:**  
 
 ---  
 - [ ] 7. **Configuración de librerías necesarias en ESP32:**
