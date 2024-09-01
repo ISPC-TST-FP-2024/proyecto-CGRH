@@ -68,7 +68,7 @@ __Criterios de Aceptación:__ Parámetros y condiciones que deben cumplirse para
 - [x] Instalación física de actuadores.
 - [x] Conexión de sensores al ESP32.
 - [x] Conexión de actuadores al ESP32.
-- [ ] Realización de pruebas iniciales de sensores.
+- [x] Realización de pruebas iniciales de sensores.
 - [ ] Realización de pruebas iniciales de actuadores.
 - [ ] Configuración de librerías necesarias en ESP32.
 - [ ] Documentación de los pasos de instalación.

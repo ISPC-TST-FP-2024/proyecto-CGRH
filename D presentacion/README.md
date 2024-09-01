@@ -81,7 +81,7 @@ __Optimizar la Comunicación del Proyecto:__ Garantizar que la presentación sea
 ***  
    
 **20240828**
-  
+### Sprint 1 Actividades 1, 2, 3 y 4:  
 a) Video explicativo de la distribucion de componentes en el cultivo vertical: 
 [![Distribucion](../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)](https://drive.google.com/file/d/10E275Am75Gu9GCZY3UnhghImSjLai_dZ/view?usp=drive_link)  
 
@@ -90,4 +90,19 @@ a) Video explicativo de la distribucion de componentes en el cultivo vertical:
 b) Video explicativo del conexionado de componentes: sensores, actuadores y modulos de comunicacion, en el controlador del cultivo vertical: 
 [![Conexionado](../E%20recursos/Conexion%20fp_controlador_cultivo.png)](https://drive.google.com/file/d/1-KXzR4QRcKExQlvRLP5vxHkXHMBflkuW/view?usp=drive_link)  
   
-***
+***  
+**20240831**  
+### Sprint 1 Actividades 5 a 12  
+- [x] Realización de pruebas iniciales de sensores.
+- [ ] Realización de pruebas iniciales de actuadores.
+- [ ] Configuración de librerías necesarias en ESP32.
+- [ ] Documentación de los pasos de instalación.
+- [ ] Registro de resultados de pruebas iniciales.
+- [ ] Ajustes y calibraciones necesarias.
+- [ ] Preparación de un informe de pruebas iniciales.
+- [ ] Presentación de los resultados de pruebas al equipo.  
+
+Para la realizacion de los test unitarios se crea el siguiente repositorio: [controlador_gmrh](https://github.com/ISPC-TST-FP-2024/controlador_gmrh.git)  
+
+***  
+

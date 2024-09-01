@@ -249,13 +249,19 @@ Video explicativo del conexionado de componentes: sensores, actuadores y modulos
 [![Conexionado](./E%20recursos/Conexion%20fp_controlador_cultivo.png)](https://drive.google.com/file/d/1-KXzR4QRcKExQlvRLP5vxHkXHMBflkuW/view?usp=drive_link)
 ***
 ---
-- [ ] 5. **Realización de pruebas iniciales de sensores:**
-- [ ] 6. **Realización de pruebas iniciales de actuadores:**  
-- [ ] 7. **Configuración de librerías necesarias en ESP32:**
-- [ ] 8. **Documentación de los pasos de instalación:**
-- [ ] 9. **Registro de resultados de pruebas iniciales:**
-- [ ] 10. **Ajustes y calibraciones necesarias:**
-- [ ] 11. **Preparación de un informe de pruebas iniciales:**
-- [ ] 12. **Presentación de los resultados de pruebas al equipo:**
+***  
+**20240831**  
+#### Actividades 5 a 12  
+- [x] Realización de pruebas iniciales de sensores.
+- [ ] Realización de pruebas iniciales de actuadores.
+- [ ] Configuración de librerías necesarias en ESP32.
+- [ ] Documentación de los pasos de instalación.
+- [ ] Registro de resultados de pruebas iniciales.
+- [ ] Ajustes y calibraciones necesarias.
+- [ ] Preparación de un informe de pruebas iniciales.
+- [ ] Presentación de los resultados de pruebas al equipo.  
+
+Para la realizacion de los test unitarios se crea el siguiente repositorio: [controlador_gmrh](https://github.com/ISPC-TST-FP-2024/controlador_gmrh.git)  
+
   
 
