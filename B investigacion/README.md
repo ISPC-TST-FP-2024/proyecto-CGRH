@@ -106,5 +106,20 @@ I2C:
   
 **Distribucion de Componentes**  
 
-![Distribucion de componentes](../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)
+![Distribucion de componentes](../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)  
+  
+**20240831**  
+## Simulacion en wokwi de la conexion de los sensores y actuadores.  
+La siguinete pagina indica como realizar la simulacion en el ide VSCode con la extension de wokwi. 
+[Simulacion en wokwi](https://docs.wokwi.com/vscode/getting-started).  
+Esta informacion es importante para entender como se utiliza el repositorio auxiliar de desarrollo: [Repositorio auxiliar de desarrollo](https://github.com/ISPC-TST-FP-2024/controlador_gmrh.git)
+
+## Simulacion en proteus de la conexion de los sensores y actuadores.  
+Nos sirve de soporte para la simulacion de los componentes electronicos. Ademas los componentes que no soporten la simulacion en wokwi se pueden simular en proteus. Recordar que proteus no soporta a la fecha agosto/2024 al modulo ESP-32, sin embargo al trabajar con el framework de arduino podemos utilizarlo para el firmware del ESP-32.   
+  
+## Otros simuladores
+- [Tinkercad](https://www.tinkercad.com/)
+Tinkercad es un simulador en línea gratuito de Autodesk que permite a los usuarios diseñar y simular circuitos electrónicos y proyectos de programación.
+
+
 

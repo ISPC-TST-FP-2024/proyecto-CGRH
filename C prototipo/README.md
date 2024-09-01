@@ -114,8 +114,14 @@ Se actualizo Readme.
 ![Conexiones](../E%20recursos/Conexion%20fp_controlador_cultivo.png)  
 ***  
   
-- [ ] 5. **Realización de pruebas iniciales de sensores:**
+- [x] 5. **Realización de pruebas iniciales de sensores:**
 - [ ] 6. **Realización de pruebas iniciales de actuadores:**  
+
+Se implementa las pruebas iniciales sobre el siguiente stack: 
+- **ide:** VsCode
+- **Lenguaje:** C/C++, con el framework de Arduino
+- **Plataforma:** PlatformIO, con el core de Arduino para ESP32
+- **simulacion:** wokwi, proteus, tinkercad.  
 
 ---  
 - [ ] 7. **Configuración de librerías necesarias en ESP32:**
