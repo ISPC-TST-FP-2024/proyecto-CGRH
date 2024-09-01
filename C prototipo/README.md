@@ -109,7 +109,7 @@ Se actualizo Readme.
 ***  
   
 - [x] 3. **Conexión de sensores al ESP32:** uh3tk7_8_9 completado.
-- [ ] 4. **Conexión de actuadores al ESP32:**  
+- [x] 4. **Conexión de actuadores al ESP32:**  
   
 ![Conexiones](../E%20recursos/Conexion%20fp_controlador_cultivo.png)  
 ***  
