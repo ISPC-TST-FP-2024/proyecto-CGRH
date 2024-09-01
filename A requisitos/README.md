@@ -64,8 +64,8 @@ __Criterios de Aceptación:__ Parámetros y condiciones que deben cumplirse para
   
 
 #### Sprint 1 [Product Backlog]:
-- [ ] Instalación física de sensores.
-- [ ] Instalación física de actuadores.
+- [x] Instalación física de sensores.
+- [x] Instalación física de actuadores.
 - [ ] Conexión de sensores al ESP32.
 - [ ] Conexión de actuadores al ESP32.
 - [ ] Realización de pruebas iniciales de sensores.

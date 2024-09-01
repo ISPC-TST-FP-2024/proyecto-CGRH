@@ -42,13 +42,13 @@ __Referencias y Recursos:__ Cualquier recurso adicional, como manuales, guías t
    - Se realizó la instalación física de los sensores y actuadores en la estructura del sistema.
    - Se conectaron los componentes al microcontrolador ESP32 según el esquema de conexión.
    
-![Descripcion de componentes]()
+![Distribucion de componentes](../../E%20recursos/Instalacion%20Fisica%20de%20Sensores%20y%20Actuadores.png)
    
 2. **Conexión de los componentes al microcontrolador ESP32**
    - Conexión de sensores de humedad, DHT11, sensor de lluvia, sensor ultrasónico, LDR, micrófono electret y sensores PIR.
    - Conexión de actuadores: Tira LED WS2812B y módulo de relé de 4 canales.
    
-   ![Conexión del Controlador]()
+  ![Conexiones](../../E%20recursos/Conexion%20fp_controlador_cultivo.png)
 
 3. **Realización de pruebas iniciales de funcionamiento**
    - Verificación del correcto funcionamiento de los sensores y actuadores.

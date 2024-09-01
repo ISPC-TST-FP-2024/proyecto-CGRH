@@ -44,10 +44,10 @@ __Facilitar la Comunicación:__ Sirve como un recurso centralizado para la comun
 
 __Apoyar la Documentación Final:__ Contribuir a la elaboración de informes, presentaciones y publicaciones finales al proporcionar toda la información necesaria de manera organizada.  
 ***
-## Estado 
-**Fecha**: 30 de Agosto de 2024
-**Sprint**: 1
-**Historia de usuario**: uh#3
+## Estado  
+**Fecha**: 30 de Agosto de 2024  
+**Sprint**: 1  
+**Historia de usuario**: uh#3  
 
 ## Actualizacion
 ***
