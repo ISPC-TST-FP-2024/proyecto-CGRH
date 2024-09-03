@@ -27,7 +27,7 @@
 - Karina Jazmin Barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
 - Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
 - Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
-- Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
+- Diego Ezequiel Ares, GitHub: [@diegote7](https://github.com/diegote7).
 - Lisandro Juncos, GitHub: [@Lisandro-05](https://github.com/Lisandro-05).
 - Raul Antonio Jara, GitHub: [@r-j28](https://github.com/r-j28).
 - Joaquin Zalazar, GitHub: [@breaakerr](https://github.com/breaakerr).  
