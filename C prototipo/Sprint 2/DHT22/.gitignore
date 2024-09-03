@@ -1,0 +1,10 @@
+# vscode
+.vscode/
+
+# platformio
+.pio/
+
+# git
+.git/
+
+

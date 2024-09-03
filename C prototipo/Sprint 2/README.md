@@ -2,7 +2,9 @@
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
 
 ## Informacion General
-***
+
+***La carpeta contiene toda la información relacionada con los prototipos de los sensores y sus respectivas simulaciones. En esta carpeta se encuentran los datasheets de cada sensor, las conexiones implementadas, así como el proyecto de PlatformIO para el desarrollo y programación del sistema. Además, se incluyen los archivos de simulación en Proteus para cuando no se pueda simular con PlatformIO , acompañados de las conclusiones obtenidas a partir de estas pruebas, los datos registrados, los valores medidos y si se puede un video demostrativo que muestra el funcionamiento del sistema y cómo se emplea en la práctica.***  
+
 ### Carpeta: ***D Prototipo*** 
 
 __La carpeta "C Prototipo" esta toda la documentación y materiales relacionados con el desarrollo y evaluación del prototipo. En esta carpeta se incluyen:__  
