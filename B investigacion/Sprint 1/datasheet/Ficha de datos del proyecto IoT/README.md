@@ -42,7 +42,9 @@ Cada práctica se desarrollará en forma grupal, debiendo subir el desarrollo de
 
     j. Bomba peristáltica (Intllab Mini).  
 
-    k. Bomba sumergible (Seaflo SFDP1-030-045-33). Bomba de diafragma (Shurflo 2088-594-144).  
+    k. Bomba sumergible (Seaflo SFDP1-030-045-33). 
+    
+    l. Bomba de diafragma (Shurflo 2088-594-144).  
 
 5. Electroválvulas:  
 
