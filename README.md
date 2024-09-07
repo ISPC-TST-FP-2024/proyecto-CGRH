@@ -6,7 +6,7 @@
 
 <h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
 
-
+[![19-1.jpg](https://i.postimg.cc/fT8JQByr/19-1.jpg)](https://postimg.cc/MvjWy0y7)
 
 ## Materias que integran la FP:   
 
@@ -42,7 +42,6 @@
 **Organizacion y Asignacion de roles para el equipo.**
 
 <p align=center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></p> 
-
 
 <h2 align=center><strong>La Formación Profesional</strong></h2>
  
@@ -133,6 +132,10 @@ Esto facilita un acceso más rápido y eficiente a la documentación relevante, 
   
   
 <h2 align=center><strong>Resumen de la FP: Desarrollador de Dispositivos IoT</strong></h2>
+
+[![17.png](https://i.postimg.cc/mDkHKJNV/17.png)](https://postimg.cc/G80tyMfs)
+
+[![4.png](https://i.postimg.cc/VvB0twYf/4.png)](https://postimg.cc/2Ly5pPbM)
 
 <h2 align=center><strong>Proyecto Central</strong></h2>  
 
