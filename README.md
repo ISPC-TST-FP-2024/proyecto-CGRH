@@ -1,5 +1,5 @@
 
-<p align=center><img src="./E recursos/image1-8.png" width="900"></p>
+[![1-8.jpg](https://i.postimg.cc/RV88bJKn/1-8.jpg)](https://postimg.cc/BXTMj6hq)
 
 
 <h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
