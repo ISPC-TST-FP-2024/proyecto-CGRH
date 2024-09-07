@@ -133,8 +133,6 @@ Esto facilita un acceso más rápido y eficiente a la documentación relevante, 
   
 <h2 align=center><strong>Resumen de la FP: Desarrollador de Dispositivos IoT</strong></h2>
 
-[![17.png](https://i.postimg.cc/mDkHKJNV/17.png)](https://postimg.cc/G80tyMfs)
-
 [![4.png](https://i.postimg.cc/VvB0twYf/4.png)](https://postimg.cc/2Ly5pPbM)
 
 <h2 align=center><strong>Proyecto Central</strong></h2>  
@@ -190,6 +188,8 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
  MicroPython.
  Proteus
 ```
+[![17.png](https://i.postimg.cc/mDkHKJNV/17.png)](https://postimg.cc/G80tyMfs)
+
 <h2 align=center><strong>Objetivos</strong></h2>  
 ***  
 
