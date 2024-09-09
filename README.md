@@ -1,5 +1,5 @@
 
-
+[![imagen-ispc-FP.jpg](https://i.postimg.cc/QC7SL8vJ/imagen-ispc-FP.jpg)](https://postimg.cc/0K87Dskz)
 
 <h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
 
