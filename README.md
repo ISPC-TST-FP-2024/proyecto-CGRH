@@ -1,5 +1,5 @@
 
-[![1-8-9.jpg](https://i.postimg.cc/1XDHC4QD/1-8-9.jpg)](https://postimg.cc/tnCW7q7g)
+[![descarga-1-1.jpg](https://i.postimg.cc/FsfJGC0N/descarga-1-1.jpg)](https://postimg.cc/F74RHZPB)
 
 <h2 align=center><strong>Tecnicatura Superior en Telecomunicaciones</strong></h2>  
 
