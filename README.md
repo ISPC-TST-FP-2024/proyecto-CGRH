@@ -5,7 +5,7 @@
 
 <h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
 
-[![1703-The-Role-of-Io-T-in-Smart-Water-Management-1536x878.jpg](https://i.postimg.cc/y80b2P0S/1703-The-Role-of-Io-T-in-Smart-Water-Management-1536x878.jpg)](https://postimg.cc/sMDmh56V)
+[![IOT.jpg](https://i.postimg.cc/Y2mZ1Mj3/IOT.jpg)](https://postimg.cc/rzMfT610) 
 
 ## Materias que integran la FP:   
 
