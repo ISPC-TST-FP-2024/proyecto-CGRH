@@ -188,8 +188,8 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
  Proteus
 ```
 
-            [![iotgestioninteligenteagua.jpg](https://i.postimg.cc/CKyYfpw5/iotgestioninteligenteagua.jpg)](https://postimg.cc/DScRtDJ3)   
-
+[![iotgestioninteligenteagua.jpg](https://i.postimg.cc/CKyYfpw5/iotgestioninteligenteagua.jpg)](https://postimg.cc/DScRtDJ3)    
+         
 <h2 align=center><strong>Objetivos</strong></h2>  
 ***  
 
