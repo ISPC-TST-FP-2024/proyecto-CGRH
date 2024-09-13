@@ -187,7 +187,8 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
  MicroPython.
  Proteus
 ```
-[![1-1.jpg](https://i.postimg.cc/mgFP4cr9/1-1.jpg)](https://postimg.cc/NKBs7jmG) 
+
+[![iotgestioninteligenteagua.jpg](https://i.postimg.cc/CKyYfpw5/iotgestioninteligenteagua.jpg)](https://postimg.cc/DScRtDJ3)   
 
 <h2 align=center><strong>Objetivos</strong></h2>  
 ***  
