@@ -1,19 +1,21 @@
-#include <Wire.h>
-#include "LiquidCrystal_I2C.h"
-#include "Teclado.h"
-#include "Menu.h"
+#include <Arduino.h>
+#include "SensorAHT25.h"
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);  // Dirección I2C y tamaño del LCD
-Teclado teclado(32, 33, 25, 26, 27, 14, 12);  // Pines del teclado
-Menu menu(lcd, teclado);
+SensorAHT25 sensorAHT25;
 
 void setup() {
-    lcd.init();
-    lcd.backlight();
-    teclado.iniciar();
-    menu.displayMenu();
+    Serial.begin(115200);
+    sensorAHT25.begin();
 }
 
 void loop() {
-    menu.navigate();  // Navega por el menú basado en la entrada del teclado
+    float temperature = sensorAHT25.readTemperature();
+    float humidity = sensorAHT25.readHumidity();
+
+    Serial.print("Temperatura: ");
+    Serial.print(temperature);
+    Serial.print(" °C, Humedad: ");
+    Serial.println(humidity);
+
+    delay(2000); // Espera 2 segundos antes de la siguiente lectura
 }

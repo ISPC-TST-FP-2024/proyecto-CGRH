@@ -1,19 +1,16 @@
-#include <Wire.h>
-#include "LiquidCrystal_I2C.h"
-#include "Teclado.h"
-#include "Menu.h"
+#include <Arduino.h>
+#include "SensorLDR.h"
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);  // Dirección I2C y tamaño del LCD
-Teclado teclado(32, 33, 25, 26, 27, 14, 12);  // Pines del teclado
-Menu menu(lcd, teclado);
+SensorLDR sensorLDR(32); // GPIO32
 
 void setup() {
-    lcd.init();
-    lcd.backlight();
-    teclado.iniciar();
-    menu.displayMenu();
+    Serial.begin(115200);
+    sensorLDR.begin();
 }
 
 void loop() {
-    menu.navigate();  // Navega por el menú basado en la entrada del teclado
+    int lightLevel = sensorLDR.readLightLevel();
+    Serial.print("Nivel de luz: ");
+    Serial.println(lightLevel);
+    delay(2000);
 }

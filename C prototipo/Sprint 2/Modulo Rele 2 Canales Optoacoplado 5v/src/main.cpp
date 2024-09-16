@@ -1,19 +1,19 @@
-#include <Wire.h>
-#include "LiquidCrystal_I2C.h"
-#include "Teclado.h"
-#include "Menu.h"
+#include <Arduino.h>
+#include "ModuloRele.h"
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);  // Dirección I2C y tamaño del LCD
-Teclado teclado(32, 33, 25, 26, 27, 14, 12);  // Pines del teclado
-Menu menu(lcd, teclado);
+ModuloRele rele1(4);  // GPIO4 para el primer relé
 
 void setup() {
-    lcd.init();
-    lcd.backlight();
-    teclado.iniciar();
-    menu.displayMenu();
+    Serial.begin(115200);
+    rele1.begin();
 }
 
 void loop() {
-    menu.navigate();  // Navega por el menú basado en la entrada del teclado
+    rele1.encender();
+    Serial.println("Relé encendido.");
+    delay(2000);
+
+    rele1.apagar();
+    Serial.println("Relé apagado.");
+    delay(2000);
 }

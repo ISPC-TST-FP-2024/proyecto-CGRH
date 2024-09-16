@@ -1,19 +1,17 @@
-#include <Wire.h>
-#include "LiquidCrystal_I2C.h"
-#include "Teclado.h"
-#include "Menu.h"
+#include <Arduino.h>
+#include "SensorUltrasonico.h"
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);  // Dirección I2C y tamaño del LCD
-Teclado teclado(32, 33, 25, 26, 27, 14, 12);  // Pines del teclado
-Menu menu(lcd, teclado);
+SensorUltrasonico sensorUltrasonico(12, 13); // GPIO12 Trigger, GPIO13 Echo
 
 void setup() {
-    lcd.init();
-    lcd.backlight();
-    teclado.iniciar();
-    menu.displayMenu();
+    Serial.begin(115200);
+    sensorUltrasonico.begin();
 }
 
 void loop() {
-    menu.navigate();  // Navega por el menú basado en la entrada del teclado
+    long distance = sensorUltrasonico.readDistance();
+    Serial.print("Distancia: ");
+    Serial.print(distance);
+    Serial.println(" cm");
+    delay(2000);
 }
