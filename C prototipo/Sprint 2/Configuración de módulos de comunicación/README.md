@@ -1,94 +1,70 @@
 # Tecnicatura Superior en Telecomunicaciones
 ### Profesores: Gonzalo Vera, Jorge Morales, Dante Violi  
 
+## Investigaciones e Implementaciones en Tecnologías de Comunicación (Wi-Fi, LoRa, Bluetooth).
+
 ## Informacion General
 
-***La carpeta contiene toda la información relacionada con los prototipos de los sensores y sus respectivas simulaciones. En esta carpeta se encuentran los datasheets de cada sensor, las conexiones implementadas, así como el proyecto de PlatformIO para el desarrollo y programación del sistema. Además, se incluyen los archivos de simulación en Proteus para cuando no se pueda simular con PlatformIO , acompañados de las conclusiones obtenidas a partir de estas pruebas, los datos registrados, los valores medidos y si se puede un video demostrativo que muestra el funcionamiento del sistema y cómo se emplea en la práctica.***  
+***Esta carpeta contiene una colección de investigaciones y desarrollos realizados en torno a tres tecnologías de comunicación inalámbrica: Wi-Fi, LoRa, y Bluetooth. En este  proyecto, se han implementado diversas soluciones utilizando el ESP32 y el NodeMCU ESP8266, con el objetivo de lograr una comunicación eficiente y confiable entre dispositivos IoT. Cada una de las tecnologías exploradas en esta carpeta tiene su propia sección, donde se detallan los procedimientos seguidos para su configuración, pruebas realizadas, resultados obtenidos y la implementación final. Además, se incluye una conclusión general que compara las capacidades y casos de uso ideales de cada tecnología.***  
 
-### Carpeta: ***D Prototipo*** 
+## Implementación de Comunicación mediante Wi-Fi
 
-__La carpeta "C Prototipo" esta toda la documentación y materiales relacionados con el desarrollo y evaluación del prototipo. En esta carpeta se incluyen:__  
+Descripción:
+En esta sección se presenta la implementación de la comunicación mediante Wi-Fi usando el NodeMCU ESP8266. Se ha utilizado el protocolo HTTP para enviar y recibir datos desde un servidor remoto. El documento cubre desde la configuración inicial del módulo ESP8266 para conectarse a una red Wi-Fi, hasta las pruebas de envío de datos utilizando solicitudes HTTP POST.
 
-__Diseño y Planificación:__ Planos, esquemas, y especificaciones técnicas del prototipo, junto con la planificación del proceso de desarrollo.    
+Procedimientos Realizados:
 
-__Documentación del Desarrollo:__ Registros detallados de cada etapa del proceso de construcción, incluyendo materiales utilizados, técnicas aplicadas, y modificaciones realizadas.  
+Configuración de la conexión Wi-Fi en el ESP8266.
+Envío de datos a un servidor web a través de HTTP.
+Validación de la comunicación con respuestas del servidor.
 
-__Resultados de Pruebas:__ Informes y datos derivados de las pruebas realizadas al prototipo, incluyendo análisis de rendimiento y cualquier ajuste necesario.  
+Conclusión:
 
-__Problemas y Soluciones:__ Descripción de problemas encontrados durante el desarrollo y las soluciones implementadas para resolverlos.  
+La comunicación mediante Wi-Fi es eficiente y permite el envío de grandes volúmenes de datos en tiempo real, lo que la convierte en una opción ideal para aplicaciones IoT en entornos con acceso a internet. Sin embargo, depende de la cobertura y estabilidad de la red Wi-Fi.
 
-__Referencias y Recursos:__ Cualquier recurso adicional, como manuales, guías técnicas y referencias relevantes para el desarrollo del prototipo.
-***
+## Implementación de Comunicación mediante LoRa
 
+Descripción:
 
-## Recursos
-#### Software 💻
+En este apartado esta la  implementación de la comunicación LoRa utilizando módulos SX1278 conectados a un ESP32. Se describe cómo configurar los módulos para la transmisión y recepción de datos a largas distancias sin necesidad de infraestructura de red. El documento incluye tanto la configuración del hardware como del software, junto con pruebas para medir el alcance y la estabilidad de la comunicación.
 
-**Entorno de Desarrollo:**  
-**• VSCode:** Para escribir y gestionar el código.
-PlatformIO: Para facilitar el desarrollo con ESP32 y otros microcontroladores.
-Lenguaje de Programación:
+Procedimientos Realizados:
 
-**• C/C++:** Común para la programación de microcontroladores.
-Python: Para scripts de procesamiento de datos o control.
+Configuración de los módulos LoRa SX1278 para transmisión y recepción de datos.
+Pruebas de alcance en campo abierto y entornos controlados.
+Validación de la estabilidad de la comunicación a distintas distancias.
 
-**Bibliotecas y Frameworks:**  
-**• Arduino Libraries:** Para trabajar con sensores y módulos específicos.
-ESP-IDF o Arduino Core para ESP32: Para programación específica del ESP32.  
+Conclusión:
 
-**Herramientas de Comunicación:**  
-**• MQTT Broker:** Para la comunicación entre dispositivos y el servidor central.
-Protocolos de Comunicación: Implementación de MQTT, HTTP/HTTPS para enviar y recibir datos.
+La tecnología LoRa es excelente para aplicaciones que requieren comunicación a larga distancia con un bajo consumo de energía. Es especialmente útil en áreas remotas donde no hay acceso a redes Wi-Fi o celulares. Sin embargo, la tasa de transferencia de datos es más baja en comparación con otras tecnologías.
 
-**Visualización y Control:**  
-**• Interfaz Web:** Para monitorear y controlar el sistema desde un navegador (puedes usar frameworks como React, Vue.js, o simplemente HTML/CSS/JavaScript).
-Plataformas en la Nube: AWS, Azure, o Google Cloud para almacenar datos y manejar la visualización en la nube.
+## Implementación de Comunicación mediante Bluetooth
 
-**Control de Versiones:**  
-**• Git:** Para el control de versiones del código y la colaboración en el desarrollo (usualmente acompañado de GitHub, GitLab o Bitbucket).
+Descripción:
 
+En este apartado esta la implementación de Bluetooth utilizando el ESP32 para establecer una comunicación directa entre el microcontrolador y un dispositivo móvil. El documento detalla cómo configurar el módulo Bluetooth, cómo emparejar el dispositivo con un teléfono móvil y cómo enviar y recibir datos en tiempo real.
 
-#### Hardware ⚙
+Procedimientos Realizados:
 
-**Microcontroladores:**  
-**• ESP32:** Ideal por su conectividad (WiFi y Bluetooth) y capacidad de procesamiento.
+Configuración del Bluetooth en el ESP32 para la comunicación con un teléfono móvil.
+Pruebas de transmisión y recepción de datos entre el ESP32 y el móvil.
+Implementación de control remoto de un LED a través de Bluetooth desde una aplicación móvil.
 
-**Sensores:**  
-**• Sensor de Humedad del Suelo:** Para medir la humedad en el suelo.  
-**• Sensor de pH:** Para medir el pH del suelo o del agua.  
-**• Sensor de Lluvia:** Para detectar precipitaciones y ajustar el riego en consecuencia.  
-**• Sensor de Temperatura:** Para medir la temperatura ambiental.
+Conclusión:
 
-**Módulos de Comunicación:**  
-**• Módulos LoRa:** Para comunicación de largo alcance, ideal en áreas rurales.  
-**• Módulos Zigbee o Thread:** Para redes de sensores de corto a medio alcance.  
+La comunicación Bluetooth es ideal para aplicaciones de corto alcance y control local de dispositivos. La implementación es simple y permite interacciones directas con el usuario a través de dispositivos móviles. Aunque su alcance es limitado, ofrece una solución confiable para escenarios de control a corta distancia.
 
-**Actuadores:**  
-**• Válvulas de Riego:** Para controlar el flujo de agua.  
-**• Bombas de Agua:** Si el sistema necesita bombear agua desde una fuente externa.
+## Conclusión General:
 
-**Fuente de Energía:**  
-**• Baterías o Paneles Solares:** Según la ubicación y la duración de funcionamiento necesario.
+En este desarrollo de este proyecto, se ha podido establecer una comprensión profunda de las capacidades de cada tecnología de comunicación:
 
-**Elementos de Soporte:**  
-**• Cables y Conectores:** Para conectar sensores y actuadores a los microcontroladores.  
-**• Caja de Protección:** Para resguardar los componentes electrónicos de condiciones ambientales.
+- Wi-Fi es ideal para aplicaciones con acceso a redes de internet y donde se requiere una alta velocidad de transmisión de datos.
+- LoRa es perfecto para entornos donde se necesita comunicación de largo alcance y bajo consumo de energía, aunque con una velocidad de transmisión más baja.
+- Bluetooth es adecuado para el control de dispositivos a corta distancia y ofrece una solución rápida para aplicaciones de interacción directa con el usuario.
 
-## Objetivos
-
-__Consolidar el Diseño del Prototipo:__ Agrupar toda la documentación relacionada con el diseño y desarrollo del prototipo.  
-
-__Registrar el Proceso de Desarrollo:__ Documentar detalladamente cada etapa del proceso de construcción del prototipo, desde la concepción inicial hasta la implementación final, para asegurar una trazabilidad completa.
-
-__Centralizar la Información Técnica:__ Mantener un archivo organizado con todos los datos técnicos, materiales utilizados, y configuraciones del prototipo, facilitando su análisis y futuras modificaciones.  
-
-__Facilitar la Evaluación y Pruebas:__ Incluir los resultados de las pruebas realizadas al prototipo, así como cualquier ajuste o mejora implementada en base a ese protoripo.
-
-__Documentar Problemas y Soluciones:__ Registrar cualquier Problemas encontrado durante el desarrollo del prototipo y las soluciones adoptadas.
-
-__Apoyar la Comunicación y Colaboración:__ Sirve como un recurso central para los miembros del equipo, permitiendo un acceso fácil y claro a toda la información relevante del prototipo.  
+Cada tecnología tiene su propio conjunto de ventajas y limitaciones, lo que permite elegir la más adecuada según los requisitos de la aplicación. Esta carpeta proporciona una guía práctica para implementar cualquiera de estas tecnologías en proyectos IoT, con documentación detallada de cada paso y lecciones aprendidas durante el proceso.
 
 
-## Actualizacion
-20240815
+ ## Actualizacion
+20240920
 Se actualizo Readme.
