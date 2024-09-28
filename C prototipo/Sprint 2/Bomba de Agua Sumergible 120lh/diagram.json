@@ -22,7 +22,7 @@
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
       "top": -620.8,
-      "left": -680.8,
+      "left": -680.8,  
       "attrs": {}
     },
     { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -747.3, "left": -704.9, "attrs": {} },
