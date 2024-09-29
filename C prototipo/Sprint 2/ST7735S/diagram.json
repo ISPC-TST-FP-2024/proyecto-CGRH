@@ -1,39 +1,27 @@
 {
   "version": 1,
-  "author": "Cristian Gonzalo Vera",
+  "author": "Arvind Patil",
   "editor": "wokwi",
   "parts": [
-    {
-      "type": "board-esp32-devkit-c-v4",
-      "id": "esp",
-      "top": -585.6,
-      "left": -1358.36,
-      "attrs": {}
-    },
-    { "type": "wokwi-dht22", "id": "dht1", "top": -911.7, "left": -648.6, "attrs": {} },
-    {
-      "type": "wokwi-lcd2004",
-      "id": "lcd1",
-      "top": -502.4,
-      "left": -724,
-      "attrs": { "pins": "i2c" }
-    },
-    {
-      "type": "wokwi-photoresistor-sensor",
-      "id": "ldr1",
-      "top": -620.8,
-      "left": -680.8,
-      "attrs": {}
-    },
-    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -747.3, "left": -704.9, "attrs": {} },
-    { "type": "wokwi-servo", "id": "servo1", "top": -520.4, "left": -1180.8, "attrs": {} }
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -43.3, "left": 158.2, "attrs": {} },
+    { "type": "chip-st7735", "id": "chip1", "top": -104.58, "left": -52.8, "attrs": {} }
   ],
   "connections": [
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "esp:GND.2", "servo1:GND", "black", [ "v0", "h67.2", "v86.4" ] ],
-    [ "esp:5V", "servo1:V+", "red", [ "h-19.05", "v19.2", "h182.4", "v-96" ] ],
-    [ "esp:18", "servo1:PWM", "orange", [ "h28.8", "v28.8" ] ]
+    [ "chip1:RST", "uno:8", "magenta", [ "h0" ] ],
+    [ "chip1:BLA", "uno:3.3V", "blue", [ "h147.57", "v233.35", "h48" ] ],
+    [ "chip1:DC", "uno:9", "gold", [ "h51.57", "v98.95", "h163.2" ] ],
+    [ "chip1:CS", "uno:10", "yellow", [ "v108.55", "h195.57" ] ],
+    [ "chip1:VCC", "uno:5V", "red", [ "h-14.47", "v271.75", "h364.8" ] ],
+    [ "chip1:GND", "uno:GND.2", "black", [ "h-4.87", "v300.55", "h345.6" ] ],
+    [ "chip1:DIN", "uno:11", "white", [ "h-33.67", "v-35.45", "h345.6" ] ],
+    [ "chip1:SCK", "uno:13", "purple", [ "h-72.07", "v-64.25", "h355.2" ] ],
+    [ "chip1:VCC", "esp:VIN", "red", [ "h-19.2", "v-19.2", "h201.6", "v163.2" ] ],
+    [ "chip1:GND", "esp:GND.2", "black", [ "h-28.8", "v-38.4", "h220.8", "v172.8" ] ],
+    [ "chip1:CS", "esp:D15", "cyan", [ "h18.04", "v240", "h192", "v-86.2" ] ],
+    [ "chip1:DC", "esp:D2", "limegreen", [ "h200.44", "v19.2" ] ],
+    [ "chip1:SCK", "esp:D18", "magenta", [ "h-19.2", "v249.6", "h364.8", "v-153.6" ] ],
+    [ "chip1:DIN", "esp:D23", "blue", [ "h-28.8", "v268.8", "h384", "v-211.2" ] ],
+    [ "chip1:RST", "esp:D22", "yellow", [ "h210.04", "v86.4" ] ]
   ],
   "dependencies": {}
 }

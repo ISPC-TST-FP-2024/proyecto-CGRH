@@ -1,39 +1,25 @@
 {
   "version": 1,
-  "author": "Cristian Gonzalo Vera",
+  "author": "vitto durigutti",
   "editor": "wokwi",
   "parts": [
-    {
-      "type": "board-esp32-devkit-c-v4",
-      "id": "esp",
-      "top": -585.6,
-      "left": -1358.36,
-      "attrs": {}
-    },
-    { "type": "wokwi-dht22", "id": "dht1", "top": -911.7, "left": -648.6, "attrs": {} },
-    {
-      "type": "wokwi-lcd2004",
-      "id": "lcd1",
-      "top": -502.4,
-      "left": -724,
-      "attrs": { "pins": "i2c" }
-    },
-    {
-      "type": "wokwi-photoresistor-sensor",
-      "id": "ldr1",
-      "top": -620.8,
-      "left": -680.8,  
-      "attrs": {}
-    },
-    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -747.3, "left": -704.9, "attrs": {} },
-    { "type": "wokwi-servo", "id": "servo1", "top": -520.4, "left": -1180.8, "attrs": {} }
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 278.6, "left": 38.4, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 150, "left": 167, "attrs": { "color": "red" } },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": 20.7, "left": -215.3, "attrs": {} }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "esp:GND.2", "servo1:GND", "black", [ "v0", "h67.2", "v86.4" ] ],
-    [ "esp:5V", "servo1:V+", "red", [ "h-19.05", "v19.2", "h182.4", "v-96" ] ],
-    [ "esp:18", "servo1:PWM", "orange", [ "h28.8", "v28.8" ] ]
+    [ "ultrasonic1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:12", "green", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:13", "green", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "esp:3V3", "red", [ "v19.2", "h115.2", "v-105.6" ] ],
+    [ "esp:5", "relay1:IN", "green", [ "h14.44", "v144", "h-134.4", "v57.8" ] ],
+    [ "relay1:VCC", "esp:5V", "red", [ "h-48", "v-96" ] ],
+    [ "relay1:GND", "esp:GND.1", "black", [ "h-76.8", "v-154" ] ],
+    [ "led1:A", "relay1:NC", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.3", "black", [ "h-38", "v-105.6" ] ]
   ],
   "dependencies": {}
 }
