@@ -1,133 +1,78 @@
-# Pruebas de conexion wifi para esp32
+# Manual de Verificación de Conexión de Módulos en ESP32
 
 
-  1. ESP32 como Access Point (Punto de Acceso): El ESP32 actúa como un punto de acceso y otros dispositivos pueden conectarse a él.
-   2. ESP32 como Cliente WiFi (Recibe datos): El ESP32 se conecta a una red WiFi y recibe datos desde un servidor o otro dispositivo.
-   3. ESP32 en modo Mixto (Access Point + Cliente): El ESP32 actúa simultáneamente como punto de acceso y cliente, permitiendo la conectividad con una red WiFi y al mismo tiempo ofreciendo un punto de acceso.
----  
+1. ## Objetivos del Proceso de Verificación
 
-1. **ESP32 como Access Point (Punto de Acceso)**
+   - Asegurar la correcta conexión física y lógica de los módulos de comunicación al ESP32.
+   - Comprobar la correcta transmisión y recepción de datos entre el ESP32 y los módulos.
+   - Garantizar que los pines y las configuraciones de hardware sean correctas.  
 
-En este modo, el ESP32 crea su propia red WiFi a la que otros dispositivos pueden conectarse.  
+---    
 
-```cpp 
+2. ## Requisitos Previos
 
-#include <WiFi.h>
+- Herramientas de desarrollo: PlatformIO y Visual Studio Code.
+- ESP32 con los módulos de comunicación correspondientes (WiFi, Bluetooth, etc.).
+- Acceso a una red WiFi para las pruebas.  
 
-const char* ssid = "ESP32_AP";
-const char* password = "12345678";  // Contraseña de tu red AP
+---
 
-void setup() {
-  Serial.begin(115200);
+3. ## Subtareas/Pasos de Verificación  
 
-  // Configurar el ESP32 como Access Point
-  WiFi.softAP(ssid, password);
 
-  Serial.println("Access Point creado");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.softAPIP());  // Dirección IP del AP
-}
+Paso 1: Identificar los pines de conexión para los módulos en la placa ESP32
 
-void loop() {
-  // Aquí puedes manejar las conexiones entrantes si es necesario
-}
-```  
-- Resultado esperado: El ESP32 creará una red llamada "ESP32_AP", a la que puedes conectarte desde otros dispositivos. La dirección IP del punto de acceso será mostrada en la consola.
+    Consulta la hoja de datos del ESP32 para verificar los pines de conexión (GPIO) específicos para cada módulo.
+    Asegúrate de que los pines seleccionados no interfieran con otros módulos o funciones de la placa.
 
-2. **ESP32 como Cliente WiFi (Recibe Datos de un Servidor)**
+Paso 2: Conectar físicamente los módulos de comunicación al ESP32
 
-Aquí, el ESP32 se conecta a una red WiFi y luego puede enviar y recibir datos de un servidor (por ejemplo, usando un servidor web).
+    Conecta cada módulo de comunicación (WiFi, Bluetooth, etc.) al ESP32 según el esquema de pines.
+    Revisa las conexiones físicas para confirmar que estén seguras y que los cables no estén dañados.
 
-```cpp 
-#include <WiFi.h>
-#include <HTTPClient.h>
+Paso 3: Configurar los pines en el código de inicialización del microcontrolador
 
-const char* ssid = "your_SSID";
-const char* password = "your_PASSWORD";
+    Inicia una nueva sesión en PlatformIO.
 
-void setup() {
-  Serial.begin(115200);
-  
-  // Conexión a la red WiFi
-  WiFi.begin(ssid, password);
-  
-  Serial.print("Conectando a WiFi");
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  
-  Serial.println(" Conectado!");
-}
-
-void loop() {
-  if (WiFi.status() == WL_CONNECTED) {  // Asegurarse de que el ESP32 esté conectado
-    HTTPClient http;
-    
-    // Hacer una solicitud GET a un servidor
-    http.begin("http://jsonplaceholder.typicode.com/posts/1");  // URL de prueba
-    int httpCode = http.GET();  // Ejecutar la solicitud
-
-    if (httpCode > 0) {  // Comprobar el código de respuesta
-      String payload = http.getString();  // Obtener la respuesta
-      Serial.println("Respuesta recibida:");
-      Serial.println(payload);
-    } else {
-      Serial.println("Error en la solicitud");
-    }
-
-    http.end();  // Finalizar la conexión
-  }
-
-  delay(10000);  // Realizar una nueva solicitud cada 10 segundos
-}
-```  
-- Resultado esperado: El ESP32 se conectará a una red WiFi y realizará una solicitud HTTP a un servidor web, imprimiendo la respuesta en el monitor serie.
-
-3. **ESP32 en Modo Mixto (Access Point + Cliente)**
-
-En este modo, el ESP32 actúa como un cliente conectado a una red WiFi y también como un punto de acceso simultáneo.   
+    Configura los pines y credenciales de conexión WiFi en el código de tu ESP32, como en el siguiente ejemplo:
 
 ```cpp
+const char* ssid = "nombre_red";
+const char* password = "contraseña_red";
 
-#include <WiFi.h>
+```
+Configura el ESP32 como punto de acceso y cliente WiFi, y define las direcciones IP de los dispositivos de destino para realizar pruebas de conexión.
 
-// Configuración de AP
-const char* ap_ssid = "ESP32_AP";
-const char* ap_password = "12345678";
+Paso 4: Realizar una prueba de comunicación básica entre el ESP32 y los módulos
 
-// Configuración de Cliente WiFi
-const char* client_ssid = "your_SSID";
-const char* client_password = "your_PASSWORD";
+- Sube el código al ESP32 y abre el monitor serie para observar el proceso de conexión.
 
-void setup() {
-  Serial.begin(115200);
+- Verifica que el ESP32 se conecte correctamente a la red WiFi y que establezca una red de punto de acceso, si es necesario.
 
-  // Configurar el ESP32 como Cliente WiFi
-  WiFi.begin(client_ssid, client_password);
-  Serial.print("Conectando a WiFi como cliente");
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println(" Conectado a WiFi!");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());
+- Utiliza la función pingAndPrint para probar la conectividad con los dispositivos de destino mediante las direcciones IP configuradas.
+```cpp
+    void pingAndPrint(const IPAddress& ip) {
+    WiFiClient client;
+    if (client.connect(ip, echoPort)) {
+        Serial.printf("Conexión a %s exitosa\n", ip.toString().c_str());
+        client.stop();
+    } else {
+        Serial.printf("Conexión a %s fallida\n", ip.toString().c_str());
+    }
+}  
+```
 
-  // Configurar el ESP32 como Access Point
-  WiFi.softAP(ap_ssid, ap_password);
-  Serial.println("Access Point creado");
-  Serial.print("IP Address del AP: ");
-  Serial.println(WiFi.softAPIP());
-}
+Paso 5: Verificar y corregir errores de conexión, si es necesario
 
-void loop() {
-  // En este ejemplo, simplemente estamos manteniendo ambos modos activos
-  // Puedes agregar funcionalidad para manejar conexiones entrantes al AP o hacer solicitudes desde el cliente WiFi
-  delay(10000);
-}
+Si el ESP32 no se conecta o muestra errores, verifica:
+ - Las credenciales de la red WiFi.
+ - La configuración de pines y la conexión física de los módulos.
+ - La configuración de las IPs de destino.
+Realiza ajustes en el código o en las conexiones físicas según sea necesario y repite las pruebas hasta obtener una conexión exitosa.
 
+  
+--- 
 
-```  
+4. ## Pruebas de Comunicación
 
-- Resultado esperado: El ESP32 se conectará a la red WiFi como cliente y al mismo tiempo ofrecerá un punto de acceso llamado "ESP32_AP". Puedes conectarte al AP mientras el ESP32 sigue recibiendo datos desde la red WiFi.
+Realiza pruebas adicionales para verificar la transmisión de datos mediante diferentes protocolos, como MQTT, HTTP o TCP. Registra los resultados de cada prueba y, si hay errores, toma notas detalladas para una revisión posterior.
