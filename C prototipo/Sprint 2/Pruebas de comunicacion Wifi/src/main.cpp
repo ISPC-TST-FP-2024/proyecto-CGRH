@@ -4,12 +4,12 @@
 void pingAndPrint(const IPAddress& ip);
 
 // Configuración de AP
-const char* ap_ssid = "ESP32_AP";
-const char* ap_password = "12345678";
+const char* ap_ssid = "ESP32_AP"; //red wifi
+const char* ap_password = "12345678"; //clave de access point
 
 // Configuración de Cliente WiFi
-const char* client_ssid = "Clarowifi4228";  
-const char* client_password = "10052069";   
+const char* client_ssid = "usuario";  
+const char* client_password = "Clave";   
 
 IPAddress ip1(192, 168, 100, 1);
 IPAddress ip2(8, 8, 8, 8);
