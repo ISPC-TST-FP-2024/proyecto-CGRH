@@ -1,5 +1,3 @@
-# strategy.py
-
 from communication_module import BLECommunication, WiFiCommunication
 
 class CommunicationStrategy:
