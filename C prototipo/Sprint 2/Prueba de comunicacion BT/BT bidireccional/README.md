@@ -69,6 +69,6 @@ Conectar el sensor AHT10 al ESP32 utilizando los siguientes pines:
 - Los datos se muestran en el dispositivo Bluetooth conectado sin interrupciones ni errores.
 
 <div style="text-align: center;">
-  <img src="https://github.com/ISPC-TST-FP-2024/proyecto-CGRH/blob/main/C%20prototipo/Sprint%202/Prueba%20de%20comunicacion%20BT/img/delay%205s.jpg" alt="imagen bt" style="width: 70%;">
+  <img src="https://github.com/ISPC-TST-FP-2024/proyecto-CGRH/blob/main/C%20prototipo/Sprint%202/Prueba%20de%20comunicacion%20BT/img/bidireccional.jpg" alt="imagen bt" style="width: 70%;">
 </div>
 
