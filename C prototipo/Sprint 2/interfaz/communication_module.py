@@ -1,4 +1,9 @@
-# communication_module.py
+from bleak import BleakClient
+from exceptions import BLEConnectionError, WiFiConnectionError
+
+# Dirección MAC del ESP32 (cámbiala a la correcta)
+BLE_ADDRESS = "xx:xx:xx:xx:xx:xx"
+CHARACTERISTIC_UUID = "87654321-4321-4321-4321-210987654321"
 
 class CommunicationError(Exception):
     """Excepción general para errores de comunicación"""
@@ -18,31 +23,38 @@ class CommunicationModule:
 
 class BLECommunication(CommunicationModule):
     """Clase para la comunicación por Bluetooth"""
-    def connect(self):
-        print("Conectando a través de Bluetooth...")
-        # Código específico para conectar BLE
+    def __init__(self):
+        self.client = BleakClient(BLE_ADDRESS)
 
-    def send_data(self, data):
+    async def connect(self):
+        try:
+            await self.client.connect()
+            print("Conectado a través de Bluetooth")
+        except Exception as e:
+            raise BLEConnectionError(f"Error de conexión BLE: {e}")
+
+    async def send_data(self, data):
+        # Convertir datos a bytes antes de enviarlos
+        data_bytes = bytes(str(data), 'utf-8')
+        await self.client.write_gatt_char(CHARACTERISTIC_UUID, data_bytes)
         print(f"Enviando datos por Bluetooth: {data}")
-        # Código para enviar datos por BLE
 
-    def receive_data(self):
+    async def receive_data(self):
+        data = await self.client.read_gatt_char(CHARACTERISTIC_UUID)
         print("Recibiendo datos por Bluetooth...")
-        # Código para recibir datos por BLE
-        return {"status": "success", "data": "datos recibidos BLE"}
+        return data.decode('utf-8')
 
 
 class WiFiCommunication(CommunicationModule):
     """Clase para la comunicación por Wi-Fi"""
     def connect(self):
         print("Conectando a través de Wi-Fi...")
-        # Código específico para conectar Wi-Fi
+        # Código para conectar Wi-Fi (omitir en este caso)
 
     def send_data(self, data):
         print(f"Enviando datos por Wi-Fi: {data}")
-        # Código para enviar datos por HTTP/REST
+        # Código para enviar datos por HTTP/REST (omitir en este caso)
 
     def receive_data(self):
         print("Recibiendo datos por Wi-Fi...")
-        # Código para recibir datos por HTTP
         return {"status": "success", "data": "datos recibidos Wi-Fi"}
