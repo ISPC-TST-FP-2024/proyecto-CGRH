@@ -78,3 +78,5 @@ void loop() {
 
 - Conecta tu dispositivo (móvil, tablet, etc.) al Bluetooth del ESP32, cuyo nombre es "ESP32_BT".
 -  Verifica que recibas los datos de temperatura y humedad enviados desde el ESP32 a través de Bluetooth
+- se adjunta imagen de telefono android con la aplicacion "Serial Bluetooth Terminal"
+![imagen BT](https://github.com/ISPC-TST-FP-2024/proyecto-CGRH/blob/main/C%20prototipo/Sprint%202/Prueba%20de%20comunicacion%20BT/img/delay%205s.jpg)
