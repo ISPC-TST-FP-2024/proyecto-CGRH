@@ -1,21 +1,20 @@
-# main.py
-
 from strategy import CommunicationStrategy
+import asyncio
 
-def main():
-    communication_type = "WiFi"  # Aquí puedes cambiar a "BLE" según sea necesario
+async def main():
+    communication_type = "BLE"  # Puedes cambiar entre "BLE" y "WiFi"
     communication_module = CommunicationStrategy(communication_type)
 
     # Conectar al módulo de comunicación seleccionado
-    communication_module.connect()
+    await communication_module.connect()
 
     # Enviar datos
     data_to_send = {"sensor": "temperatura", "valor": 25.5}
-    communication_module.send_data(data_to_send)
+    await communication_module.send_data(data_to_send)
 
     # Recibir datos
-    data_received = communication_module.receive_data()
+    data_received = await communication_module.receive_data()
     print(f"Datos recibidos: {data_received}")
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
