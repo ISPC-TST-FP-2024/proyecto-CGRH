@@ -1,5 +1,3 @@
-# exceptions.py
-
 class CommunicationError(Exception):
     """Excepción genérica para problemas de comunicación"""
     pass
