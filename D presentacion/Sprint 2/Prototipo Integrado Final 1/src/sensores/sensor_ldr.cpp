@@ -1,13 +1,25 @@
-#include <Arduino.h>
-#include "SensorLDR.h"
 #include "sensor_ldr.h"
+#include <Arduino.h>
 
-SensorLDR sensorLDR(32);  // Pin GPIO32
+// Pin donde está conectado el LDR
+int pinLDRGlobal;
 
-void iniciarLDR() {
-    sensorLDR.begin();
+// Función para inicializar el sensor LDR
+void inicializarSensorLDR(int pinLDR) {
+    pinLDRGlobal = pinLDR; // Guardamos el pin donde está conectado el LDR
+    pinMode(pinLDRGlobal, INPUT);
+    Serial.println("Sensor LDR inicializado");
 }
 
-int leerNivelLuzLDR() {
-    return sensorLDR.readLightLevel();
+// Función para leer el valor del sensor LDR
+int leerLuzLDR() {
+    // Leer el valor analógico del LDR
+    int valorLDR = analogRead(pinLDRGlobal);
+
+    // Imprimir el valor en el serial para depuración
+    Serial.print("Valor LDR: ");
+    Serial.println(valorLDR);
+
+    // Devolver el valor leído
+    return valorLDR;
 }

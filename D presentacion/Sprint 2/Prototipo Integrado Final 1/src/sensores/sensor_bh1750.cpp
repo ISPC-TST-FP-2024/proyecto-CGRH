@@ -1,18 +1,31 @@
+#include "sensor_bh1750.h"
 #include <Wire.h>
 #include <BH1750.h>
-#include "sensor_bh1750.h"
 
-BH1750 lightMeter;
+// Crear un objeto para el sensor BH1750
+BH1750 sensorBH1750;
 
-void iniciarBH1750() {
-    Wire.begin(21, 22);  // Pines SDA y SCL en ESP32
-    if (!lightMeter.begin()) {
-        Serial.println("Error al iniciar BH1750");
-        while (1);
+void inicializarSensorBH1750() {
+    // Inicializar el protocolo I2C
+    Wire.begin();
+    
+    // Inicializar el sensor BH1750 en modo de resolución alta
+    if (sensorBH1750.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
+        Serial.println("Sensor BH1750 iniciado correctamente");
+    } else {
+        Serial.println("Error al iniciar el sensor BH1750");
     }
-    Serial.println("BH1750 iniciado correctamente.");
 }
 
-float leerLuxBH1750() {
-    return lightMeter.readLightLevel();  // Retorna el nivel de luz en lux
+uint16_t leerLuzBH1750Sensor() {
+    // Leer el nivel de luz en lux
+    uint16_t lux = sensorBH1750.readLightLevel();
+    
+    // Verificar si la lectura es válida
+    if (lux == 65535) {
+        Serial.println("Error al leer el sensor BH1750");
+        return 0;
+    }
+    
+    return lux;
 }

@@ -1,7 +1,9 @@
 #ifndef SENSOR_BH1750_H
 #define SENSOR_BH1750_H
 
-void iniciarBH1750();    // Inicializar sensor BH1750
-float leerLuxBH1750();   // Leer nivel de luz en lux
+#include <stdint.h>
 
-#endif
+uint16_t leerLuzBH1750(); // Asegúrate de que solo haya una declaración
+void inicializarSensorBH1750();
+
+#endif // SENSOR_BH1750_H
