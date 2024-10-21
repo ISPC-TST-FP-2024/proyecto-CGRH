@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "vitto durigutti",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 32, "left": -239.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h48", "v-19.2" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h48", "v76.4" ] ],
+    [ "ldr1:DO", "esp:21", "green", [ "h38.4", "v-77.4", "h153.6", "v86.4" ] ],
+    [ "ldr1:AO", "esp:22", "green", [ "h28.8", "v-96.7", "h172.8", "v67.2" ] ]
+  ],
+  "dependencies": {}
+}

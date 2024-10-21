@@ -1,7 +1,7 @@
 #include "Menu.h"
 
 // Constructor del menú
-Menu::Menu(LiquidCrystal_I2C& lcd, Teclado& teclado) : _lcd(lcd), _teclado(teclado), _currentMenuIndex(0), _currentMenuDepth(0) {}
+Menu::Menu(  LiquidCrystal_I2C, Teclado& teclado) : _lcd(lcd), _teclado(teclado), _currentMenuIndex(0), _currentMenuDepth(0) {}
 
 // Opciones del menú principal
 MenuOption mainMenu[] = {
