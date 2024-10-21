@@ -1,6 +1,4 @@
 #include <Arduino.h>
-#include <FreeRTOS.h>
-#include <task.h>
 #include <nvs_flash.h>
 #include <nvs.h>
 
@@ -15,6 +13,10 @@
 #include "sensores/sensor_dht11.h"
 #include "sensores/sensor_ldr.h"
 #include "sensores/sensor_humedad_suelo.h"
+
+// Incluye librerias de los actuadores
+#include "sensores/bomba.h"
+
 
 // Almacenamiento en NVS
 nvs_handle_t nvsHandle;
@@ -108,43 +110,51 @@ void TareaBLE(void *pvParameters) {
     }
 }
 
-// Tarea para el Menú
+// Tarea para el Menú interactivo
 void TareaMenu(void *pvParameters) {
     while (1) {
         Serial.println("Menú principal:");
         Serial.println("1. Mostrar estado de WiFi");
         Serial.println("2. Conectar a WiFi");
-        Serial.println("3. Iniciar Bluetooth");
-        Serial.println("4. Habilitar/Deshabilitar WiFi");
-        Serial.println("5. Habilitar/Deshabilitar LoRa");
-        Serial.println("6. Habilitar/Deshabilitar BLE");
-        Serial.println("7. Guardar configuración y salir");
+        Serial.println("3. Desconectar WiFi");
+        Serial.println("4. Iniciar Bluetooth");
+        Serial.println("5. Habilitar/Deshabilitar WiFi");
+        Serial.println("6. Habilitar/Deshabilitar LoRa");
+        Serial.println("7. Habilitar/Deshabilitar BLE");
+        Serial.println("8. Guardar configuración y salir");
 
         if (Serial.available()) {
             char opcion = Serial.read();
             switch (opcion) {
                 case '1':
-                    estadoWiFi();
+                    verEstadoWiFi();  // Mostrar el estado de WiFi
                     break;
                 case '2':
-                    conectarWiFi();
+                    Serial.println("Introduce el SSID:");
+                    String ssid = Serial.readString(); // Lee el SSID desde la entrada
+                    Serial.println("Introduce la contraseña:");
+                    String password = Serial.readString(); // Lee la contraseña
+                    conectarWiFiManual(ssid.c_str(), password.c_str());  // Conectar a la nueva red WiFi
                     break;
                 case '3':
-                    iniciarBle();
+                    desconectarWiFi();  // Desconectar del WiFi
                     break;
                 case '4':
+                    iniciarBle();
+                    break;
+                case '5':
                     wifiHabilitado = !wifiHabilitado;
                     Serial.println(wifiHabilitado ? "WiFi habilitado" : "WiFi deshabilitado");
                     break;
-                case '5':
+                case '6':
                     loraHabilitado = !loraHabilitado;
                     Serial.println(loraHabilitado ? "LoRa habilitado" : "LoRa deshabilitado");
                     break;
-                case '6':
+                case '7':
                     bleHabilitado = !bleHabilitado;
                     Serial.println(bleHabilitado ? "BLE habilitado" : "BLE deshabilitado");
                     break;
-                case '7':
+                case '8':
                     guardarConfiguracion("wifiHabilitado", wifiHabilitado);
                     guardarConfiguracion("loraHabilitado", loraHabilitado);
                     guardarConfiguracion("bleHabilitado", bleHabilitado);
@@ -171,9 +181,9 @@ void setup() {
     bleHabilitado = leerConfiguracion("bleHabilitado", 1);
 
     // Inicialización de sensores y conexiones según configuración dinámica
-    if (wifiHabilitado) inicializarWiFi();
-    if (loraHabilitado) inicializarLoRa();
-    if (bleHabilitado) inicializarBLE();
+    if (wifiHabilitado) iniciarWiFi();
+    if (loraHabilitado) iniciarLoRa();
+    if (bleHabilitado) iniciarBle();
 
     inicializarSensorHumedadSuelo();  // Capacitivo
     inicializarSensorAHT10();
