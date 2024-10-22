@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Nahuel Velez",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 172.8, "left": 139.24, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 0.2, "left": -220.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 370.8,
+      "left": 282.2,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 382, "left": -115.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -68.5, "left": -9.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:26", "relay1:IN", "green", [ "h-57.45", "v-211.2", "h19.2" ] ],
+    [ "esp:27", "led1:A", "green", [ "h-95.85", "v86.4" ] ],
+    [ "esp:25", "servo1:PWM", "green", [ "v0", "h-364.65", "v-67.2" ] ],
+    [ "esp:34", "pot1:SIG", "green", [ "h-115.05", "v-201.6", "h-76.8" ] ],
+    [ "esp:5V", "servo1:V+", "red", [ "h-297.45", "v28.8" ] ],
+    [ "pot1:VCC", "esp:5V", "red", [ "v0" ] ],
+    [ "relay1:VCC", "esp:5V", "red", [ "h-48", "v355.2", "h403.2" ] ],
+    [ "esp:GND.2", "pot1:GND", "black", [ "v-182.4", "h-220.8" ] ],
+    [ "esp:GND.1", "servo1:GND", "black", [ "h0" ] ],
+    [ "relay1:GND", "esp:GND.1", "black", [ "h-19.2", "v278" ] ],
+    [ "esp:GND.3", "led1:C", "black", [ "h124.8", "v172.8", "h-38.4" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,13 @@
+
+This directory is intended for project header files.
+
+
+```src/main.c
+
+#include "header.h"
+
+int main (void)
+{
+ ...
+}
+```

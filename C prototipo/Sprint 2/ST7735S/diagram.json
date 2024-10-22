@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Arvind Patil",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -43.3, "left": 158.2, "attrs": {} },
+    { "type": "chip-st7735", "id": "chip1", "top": -104.58, "left": -52.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "chip1:RST", "uno:8", "magenta", [ "h0" ] ],
+    [ "chip1:BLA", "uno:3.3V", "blue", [ "h147.57", "v233.35", "h48" ] ],
+    [ "chip1:DC", "uno:9", "gold", [ "h51.57", "v98.95", "h163.2" ] ],
+    [ "chip1:CS", "uno:10", "yellow", [ "v108.55", "h195.57" ] ],
+    [ "chip1:VCC", "uno:5V", "red", [ "h-14.47", "v271.75", "h364.8" ] ],
+    [ "chip1:GND", "uno:GND.2", "black", [ "h-4.87", "v300.55", "h345.6" ] ],
+    [ "chip1:DIN", "uno:11", "white", [ "h-33.67", "v-35.45", "h345.6" ] ],
+    [ "chip1:SCK", "uno:13", "purple", [ "h-72.07", "v-64.25", "h355.2" ] ],
+    [ "chip1:VCC", "esp:VIN", "red", [ "h-19.2", "v-19.2", "h201.6", "v163.2" ] ],
+    [ "chip1:GND", "esp:GND.2", "black", [ "h-28.8", "v-38.4", "h220.8", "v172.8" ] ],
+    [ "chip1:CS", "esp:D15", "cyan", [ "h18.04", "v240", "h192", "v-86.2" ] ],
+    [ "chip1:DC", "esp:D2", "limegreen", [ "h200.44", "v19.2" ] ],
+    [ "chip1:SCK", "esp:D18", "magenta", [ "h-19.2", "v249.6", "h364.8", "v-153.6" ] ],
+    [ "chip1:DIN", "esp:D23", "blue", [ "h-28.8", "v268.8", "h384", "v-211.2" ] ],
+    [ "chip1:RST", "esp:D22", "yellow", [ "h210.04", "v86.4" ] ]
+  ],
+  "dependencies": {}
+}
