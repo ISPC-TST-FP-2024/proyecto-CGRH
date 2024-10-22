@@ -1,98 +1,123 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <Adafruit_AHTX0.h>  // para el sensor AHT10
+#include <AHT10.h>  // nueva librería para el sensor AHT10
 #include <BluetoothSerial.h>  // librería para Bluetooth
 #include <esp_system.h>  // para generar el id único
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7735.h>
 #include <SPI.h>
 
-// definir variables para el sensor de humedad
-const int pinHumResistivo = 34; // humedad resistiva (parte superior)
-const int pinHumCapacitivo = 35; // humedad capacitiva (parte inferior)
 
-// definir pines para otros sensores
-const int pinLdr = 32; // sensor de luz
-const int pinUltrasonicoTrigger = 13; // trigger ultrasonico
-const int pinUltrasonicoEcho = 12; // echo ultrasonico
-
-// definir para Bluetooth y pantalla
+// Configuración de pines
+#define TFT_CS    5
+#define TFT_RST   16
+#define TFT_DC    17
+#define RELE_LED 25
+#define RELE_BOMBA 26
+#define TRIGGER 4
+#define ECHO 2
+#define DISTANCIA_MINIMA_AGUA 10
+#define LDR 8
+#define HumSueloRES 10
+#define HumSueloCAP 11
 BluetoothSerial SerialBT;
-Adafruit_AHTX0 aht; // sensor de temperatura y humedad
-Adafruit_ST7735 tft = Adafruit_ST7735(5, 18, 19); // pantalla SPI
 
-// variables para la lógica
-String nodoID = "NODO2_BT"; // id único para este nodo
-int nivelAgua = 0; // inicializar nivel de agua
-float temp = 0.0, hum = 0.0; // variables para temperatura y humedad
+// Identificadores de nodos
+String nodoID = "Nodo_2";
 
-// función para medir nivel de agua con sensor ultrasónico
+// Variables de sensores
+float temperatura, humedad, luzAmbiente;
+int nivelAgua, humedadSueloCap, humedadSueloRes;
+
+// Pantalla y sensores
+Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
+AHT10 aht;
+
+
+
+// Función para inicializar pantalla y sensores
+void setupDisplay() {
+    Wire.begin();
+    aht.begin();
+    tft.initR(INITR_BLACKTAB);
+    tft.setRotation(1);
+    tft.fillScreen(ST77XX_BLACK);
+    tft.setCursor(0, 0);
+    tft.setTextColor(ST77XX_WHITE);
+    tft.setTextWrap(true);
+    tft.setTextSize(1);
+    tft.println("Nodo_1");
+}
+// Función para medir nivel de agua
 int medirNivelAgua() {
-  long duracion;
-  digitalWrite(pinUltrasonicoTrigger, LOW);
-  delayMicroseconds(2);
-  digitalWrite(pinUltrasonicoTrigger, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(pinUltrasonicoTrigger, LOW);
-  
-  duracion = pulseIn(pinUltrasonicoEcho, HIGH);
-  int distancia = duracion * 0.034 / 2;
-  
-  return distancia;
+    digitalWrite(TRIGGER, LOW);
+    delayMicroseconds(2);
+    digitalWrite(TRIGGER, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIGGER, LOW);
+    long duracion = pulseIn(ECHO, HIGH);
+    return duracion * 0.034 / 2;
 }
-
-// setup inicial
-void setup() {
-  Serial.begin(115200); // para debug
-  SerialBT.begin("Nodo2_Cultivo"); // inicializar Bluetooth
-  Wire.begin(); // iniciar i2c para el sensor AHT10
-  aht.begin(); // iniciar AHT10
-  pinMode(pinHumResistivo, INPUT);
-  pinMode(pinHumCapacitivo, INPUT);
-  pinMode(pinLdr, INPUT);
-  pinMode(pinUltrasonicoTrigger, OUTPUT);
-  pinMode(pinUltrasonicoEcho, INPUT);
-  
-  // iniciar pantalla
-  tft.initR(INITR_144GREENTAB);
-  tft.fillScreen(ST77XX_BLACK);
-  tft.setCursor(0, 0);
-  tft.setTextColor(ST77XX_WHITE);
-  tft.setTextWrap(true);
-  tft.setTextSize(1);
-  
-  tft.println("Nodo 2 BT");
+float leerLuzAmbiente() {
+    int lecturaLDR = analogRead(LDR);  // Leer el pin analógico
+    float luzAmbiente = (lecturaLDR / 4095.0) * 100.0;  // Convertir a porcentaje
+    Serial.print("Luz Ambiente: ");
+    Serial.println( luzAmbiente);
+    return  luzAmbiente;
 }
-
-// loop principal
-void loop() {
-  // leer sensores de temperatura y humedad
-  sensors_event_t tempEvent, humEvent;
-  aht.getEvent(&humEvent, &tempEvent);
-  temp = tempEvent.temperature;  // obtener temp
-  hum = humEvent.relative_humidity;  // obtener humedad
-  
-  // leer humedad del suelo
-  int humedadSueloResistivo = analogRead(pinHumResistivo);
-  int humedadSueloCapacitivo = analogRead(pinHumCapacitivo);
-  
-  // leer luz ambiental
-  int luz = analogRead(pinLdr);
-  
-  // medir nivel de agua
-  nivelAgua = medirNivelAgua();
-
-  // mostrar datos en pantalla
-  tft.fillScreen(ST77XX_BLACK);
-  tft.setCursor(0, 0);
-  tft.printf("Temp: %.1fC\nHum: %.1f%%\nLuz: %d\nHum Suelo (Resistivo): %d\nHum Suelo (Capacitivo): %d\nNivel Agua: %d\n", temp, hum, luz, humedadSueloResistivo, humedadSueloCapacitivo, nivelAgua);
-  
-  // generar mensaje para enviar por bluetooth
-  String mensaje = nodoID + ";Temp:" + String(temp) + ";Hum:" + String(hum) + ";Luz:" + String(luz) + ";HumRes:" + String(humedadSueloResistivo) + ";HumCap:" + String(humedadSueloCapacitivo) + ";NivelAgua:" + String(nivelAgua);
-  
-  // enviar por bluetooth
+void controlIluminacion() {
+    luzAmbiente = leerLuzAmbiente();
+    if (luzAmbiente < 20.0) {  // Si la luz ambiente es baja (menos de 20%)
+        digitalWrite(RELE_LED, HIGH);  // Encender luz
+        Serial.println("Iluminación activada.");
+    } else {
+        digitalWrite(RELE_LED, LOW);  // Apagar luz
+        Serial.println("Iluminación desactivada.");
+    }
+}
+void controlBomba() {
+    nivelAgua = medirNivelAgua();
+    if (nivelAgua < DISTANCIA_MINIMA_AGUA) {
+        digitalWrite(RELE_BOMBA, HIGH);  // Activar la bomba si el nivel de agua es bajo
+        Serial.println("Bomba activada.");
+    } else {
+        digitalWrite(RELE_BOMBA, LOW);  // Apagar la bomba
+        Serial.println("Bomba desactivada.");
+    }
+}
+void leerHumedadSuelo() {
+    humedadSueloCap = analogRead(HumSueloCAP);
+    humedadSueloRes = analogRead(HumSueloRES);
+    Serial.print("Humedad Suelo Capacitivo: ");
+    Serial.println(humedadSueloCap);
+    Serial.print("Humedad Suelo Resistivo: ");
+    Serial.println(humedadSueloRes);
+}
+void enviarMensajePorBle(int luz, int humedadSueloResistivo, int humedadSueloCapacitivo, int nivelAgua) {
+  String mensaje = nodoID + ";Temp:" + String(temperatura) + ";Hum:" + String(humedad) + ";Luz:" + String(luzAmbiente) + ";HumRes:" + String(humedadSueloRes) + ";HumCap:" + String(humedadSueloCap) + ";NivelAgua:" + String(nivelAgua);
   SerialBT.println(mensaje);
-  
-  // esperar un poco antes de repetir
-  delay(5000);
 }
+// Función principal de setup
+void setup() {
+    Serial.begin(9600);
+    pinMode(RELE_LED, OUTPUT);
+    pinMode(RELE_BOMBA, OUTPUT);
+    pinMode(TRIGGER, OUTPUT);
+    pinMode(ECHO, INPUT);
+    pinMode(LDR,INPUT);
+    digitalWrite(RELE_LED, LOW);
+    digitalWrite(RELE_BOMBA, LOW);
+  }
+
+  // Función principal de loop
+void loop() {
+
+        nivelAgua = medirNivelAgua();
+    if (nivelAgua < DISTANCIA_MINIMA_AGUA) {
+        digitalWrite(RELE_BOMBA, HIGH);
+    } else {
+        digitalWrite(RELE_BOMBA, LOW);
+    }
+}
+
+

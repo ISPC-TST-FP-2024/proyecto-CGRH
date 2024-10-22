@@ -10,234 +10,249 @@
 #include <BLE2902.h>
 #include <LoRa.h>
 #include <HTTPClient.h>
+#include <esp_system.h> 
 
-// configuracion pantalla
+// Configuración de pines
 #define TFT_CS    5
 #define TFT_RST   16
 #define TFT_DC    17
-
-// pines lora
 #define LORA_SCK  18
 #define LORA_MISO 19
 #define LORA_MOSI 23
 #define LORA_CS   5
 #define LORA_RST  14
 #define LORA_IRQ  26
+#define RELE_LED 25
+#define RELE_BOMBA 26
+#define TRIGGER 4
+#define ECHO 2
+#define DISTANCIA_MINIMA_AGUA 10
+#define LDR 8
+#define HumSueloRES 10
+#define HumSueloCAP 11
 
-// pines de reles
-#define RELE_LED 25   // pin del rele para controlar el led
-#define RELE_BOMBA 26 // pin del rele para controlar la bomba
-
-// definicion del sensor hc-sr04
-#define TRIGGER_PIN 4  // pin del trigger del sensor ultrasonico
-#define ECHO_PIN 2     // pin del echo del sensor ultrasonico
-
-// distancia limite para el nivel de agua (si esta por debajo de esto, la bomba no prende)
-#define DISTANCIA_MINIMA_AGUA 10 // valor en centimetros, cambiar segun sea necesario
-
-// wi-fi
+// Configuración de Wi-Fi
 const char* ssid = "DZS_5380";
 const char* password = "dzsi123456789";
-const char* serverName = "http://192.168.55.104/api";  // url del servidor para enviar los datos
+const char* serverName = "http://192.168.55.104/api";
 
-// identificadores de los nodos
-String nodoID_BLE = "nodo1";  // id del nodo ble, modificamos para que sea nodo 1
-String nodoID_LoRa = "nodo1";  // id del nodo lora
+// Identificadores de nodos
+String nodoID = "Nodo_1";
+String nodoID_BLE = "Nodo_1";
+String nodoID_LoRa = "Nodo_1";
 
-// configuracion ble
-#define SERVICE_UUID        "6e400001-b5a3-f393-e0a9-e50e24dcca9e"
+// Configuración BLE
+#define SERVICE_UUID       "6e400001-b5a3-f393-e0a9-e50e24dcca9e"
 #define CHARACTERISTIC_UUID "6e400003-b5a3-f393-e0a9-e50e24dcca9e"
 BLECharacteristic *pCharacteristic;
 bool dataReceived = false;
 String bleData = "";
-
-// configuracion lora
 String loraData = "";
 bool loraDataReceived = false;
 
-// variables de sensores
+// Variables de sensores
 float temperatura, humedad, luzAmbiente;
 int nivelAgua, humedadSueloCap, humedadSueloRes;
 
-// pantalla y sensores
+// Pantalla y sensores
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
-AHT10 aht10;
+AHT10 aht;
 
-// funcion para inicializar wi-fi
+// Función para configurar Wi-Fi
 void setupWiFi() {
-  WiFi.begin(ssid, password);
-  Serial.print("conectando a wifi");
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.print(".");
-  }
-  Serial.println(" conectado a wifi.");
+    WiFi.begin(ssid, password);
+    Serial.print("Conectando a Wi-Fi...");
+    for (int i = 0; i < 5; i++) {
+        if (WiFi.status() == WL_CONNECTED) {
+            Serial.println("\nConectado a Wi-Fi.");
+            Serial.println("IP: " + WiFi.localIP().toString());
+            return;
+        } else {
+            Serial.print(".");
+            delay(1000);
+        }
+    }
+    if (WiFi.status() != WL_CONNECTED) {
+        Serial.println("\nNo se pudo conectar a Wi-Fi.");
+    }
 }
 
-// enviar datos al servidor
+// Función para enviar datos al servidor
 void enviarDatosServidor(String nodoID, float temp, float hum, int nivelAgua, float luz, int humSueloCap, int humSueloRes) {
-  if(WiFi.status() == WL_CONNECTED) {
-    HTTPClient http;
-    http.begin(serverName);
-
-    String postData = "id=" + nodoID + "&temp=" + String(temp) + "&hum=" + String(hum) +
-                      "&luz=" + String(luz) + "&hum_cap=" + String(humSueloCap) +
-                      "&hum_res=" + String(humSueloRes) + "&nivel_agua=" + String(nivelAgua);
-
-    http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    int httpResponseCode = http.POST(postData);
-    if (httpResponseCode > 0) {
-      Serial.println("datos enviados al servidor");
+    if (WiFi.status() == WL_CONNECTED) {
+        HTTPClient http;
+        http.begin(serverName);
+        String postData = "id=" + nodoID + "&temp=" + String(temp) + "&hum=" + String(hum) +
+                          "&luz=" + String(luz) + "&hum_cap=" + String(humSueloCap) +
+                          "&hum_res=" + String(humSueloRes) + "&nivel_agua=" + String(nivelAgua);
+        http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+        int httpResponseCode = http.POST(postData);
+        Serial.println(httpResponseCode > 0 ? "Datos enviados al servidor." : "Error: " + String(httpResponseCode));
+        http.end();
     } else {
-      Serial.println("error enviando los datos: " + String(httpResponseCode));
+        Serial.println("No conectado a Wi-Fi.");
     }
-    http.end();
-  } else {
-    Serial.println("no conectado a wifi.");
-  }
 }
 
-// funcion para medir nivel de agua con hc-sr04
-int medirNivelAgua() {
-  digitalWrite(TRIGGER_PIN, LOW);
-  delayMicroseconds(2);
-  digitalWrite(TRIGGER_PIN, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIGGER_PIN, LOW);
 
-  // calcular el tiempo del pulso de echo
-  long duracion = pulseIn(ECHO_PIN, HIGH);
-
-  // calcular distancia en cm
-  int distancia = duracion * 0.034 / 2;
-  return distancia;
-}
-
-// procesar datos recibidos por ble
+// Procesar datos BLE
 void procesarDatosBLE() {
-  // aqui asumimos que los datos vienen con el formato:
-  // "NODO_ID;temp:xx;hum:xx;luz:xx;humcap:xx;humres:xx;nivelagua:xx"
-  String idNodo = bleData.substring(0, bleData.indexOf(";"));
-  bleData = bleData.substring(bleData.indexOf(";") + 1);  // quitar el id
-  temperatura = bleData.substring(bleData.indexOf("temp:") + 5, bleData.indexOf(";hum:")).toFloat();
-  humedad = bleData.substring(bleData.indexOf("hum:") + 4, bleData.indexOf(";luz:")).toFloat();
-  luzAmbiente = bleData.substring(bleData.indexOf("luz:") + 4, bleData.indexOf(";humcap:")).toFloat();
-  humedadSueloCap = bleData.substring(bleData.indexOf("humcap:") + 7, bleData.indexOf(";humres:")).toInt();
-  humedadSueloRes = bleData.substring(bleData.indexOf("humres:") + 7, bleData.indexOf(";nivelagua:")).toInt();
-  nivelAgua = bleData.substring(bleData.indexOf("nivelagua:") + 10).toInt();
-
-  Serial.println("datos ble recibidos del nodo: " + idNodo);
-
-  // enviar los datos al servidor
-  enviarDatosServidor(idNodo, temperatura, humedad, nivelAgua, luzAmbiente, humedadSueloCap, humedadSueloRes);
+    String idNodo = bleData.substring(0, bleData.indexOf(";"));
+    bleData = bleData.substring(bleData.indexOf(";") + 1);
+    temperatura = bleData.substring(bleData.indexOf("temp:") + 5, bleData.indexOf(";hum:")).toFloat();
+    humedad = bleData.substring(bleData.indexOf("hum:") + 4, bleData.indexOf(";luz:")).toFloat();
+    luzAmbiente = bleData.substring(bleData.indexOf("luz:") + 4, bleData.indexOf(";humcap:")).toFloat();
+    humedadSueloCap = bleData.substring(bleData.indexOf("humcap:") + 7, bleData.indexOf(";humres:")).toInt();
+    humedadSueloRes = bleData.substring(bleData.indexOf("humres:") + 7, bleData.indexOf(";nivelagua:")).toInt();
+    nivelAgua = bleData.substring(bleData.indexOf("nivelagua:") + 10).toInt();
+    Serial.println("Datos BLE recibidos del nodo: " + idNodo);
+    enviarDatosServidor(idNodo, temperatura, humedad, nivelAgua, luzAmbiente, humedadSueloCap, humedadSueloRes);
 }
 
-// procesar datos recibidos por lora
+// Procesar datos LoRa
 void procesarDatosLoRa() {
-  // aca verificamos que los datos vienen con el mismo formato que ble
-  String idNodo = loraData.substring(0, loraData.indexOf(";"));
-  loraData = loraData.substring(loraData.indexOf(";") + 1);  // quitar el id
-  temperatura = loraData.substring(loraData.indexOf("temp:") + 5, loraData.indexOf(";hum:")).toFloat();
-  humedad = loraData.substring(loraData.indexOf("hum:") + 4, loraData.indexOf(";luz:")).toFloat();
-  luzAmbiente = loraData.substring(loraData.indexOf("luz:") + 4, loraData.indexOf(";humcap:")).toFloat();
-  humedadSueloCap = loraData.substring(loraData.indexOf("humcap:") + 7, loraData.indexOf(";humres:")).toInt();
-  humedadSueloRes = loraData.substring(loraData.indexOf("humres:") + 7, loraData.indexOf(";nivelagua:")).toInt();
-  nivelAgua = loraData.substring(loraData.indexOf("nivelagua:") + 10).toInt();
-
-  Serial.println("datos lora recibidos del nodo: " + idNodo);
-
-  // enviar los datos al servidor
-  enviarDatosServidor(idNodo, temperatura, humedad, nivelAgua, luzAmbiente, humedadSueloCap, humedadSueloRes);
+    String idNodo = loraData.substring(0, loraData.indexOf(";"));
+    loraData = loraData.substring(loraData.indexOf(";") + 1);
+    temperatura = loraData.substring(loraData.indexOf("temp:") + 5, loraData.indexOf(";hum:")).toFloat();
+    humedad = loraData.substring(loraData.indexOf("hum:") + 4, loraData.indexOf(";luz:")).toFloat();
+    luzAmbiente = loraData.substring(loraData.indexOf("luz:") + 4, loraData.indexOf(";humcap:")).toFloat();
+    humedadSueloCap = loraData.substring(loraData.indexOf("humcap:") + 7, loraData.indexOf(";humres:")).toInt();
+    humedadSueloRes = loraData.substring(loraData.indexOf("humres:") + 7, loraData.indexOf(";nivelagua:")).toInt();
+    nivelAgua = loraData.substring(loraData.indexOf("nivelagua:") + 10).toInt();
+    Serial.println("Datos LoRa recibidos del nodo: " + idNodo);
+    enviarDatosServidor(idNodo, temperatura, humedad, nivelAgua, luzAmbiente, humedadSueloCap, humedadSueloRes);
 }
 
-// callback ble para recibir datos
+// Callback BLE para recibir datos
 class MyCallbacks: public BLECharacteristicCallbacks {
-  void onWrite(BLECharacteristic *pCharacteristic) {
-    bleData = pCharacteristic->getValue().c_str();
-    if (bleData.length() > 0) {
-      dataReceived = true;
+    void onWrite(BLECharacteristic *pCharacteristic) {
+        bleData = pCharacteristic->getValue().c_str();
+        if (bleData.length() > 0) {
+            dataReceived = true;
+            Serial.println("Datos recibidos por Bluetooth.");
+        }
     }
-  }
 };
 
-void setup() {
-  Serial.begin(115200);
-
-  // configurar pines de rele como salida
-  pinMode(RELE_LED, OUTPUT);
-  pinMode(RELE_BOMBA, OUTPUT);
-  digitalWrite(RELE_LED, LOW);  // apagar led inicialmente
-  digitalWrite(RELE_BOMBA, LOW); // apagar bomba inicialmente
-
-  // configurar sensor hc-sr04
-  pinMode(TRIGGER_PIN, OUTPUT);
-  pinMode(ECHO_PIN, INPUT);
-
-  // iniciar pantalla
-  tft.initR(INITR_BLACKTAB);  
-  tft.setRotation(2);
-  tft.fillScreen(ST77XX_BLACK);
-  tft.setTextSize(1);
-  tft.setTextColor(ST77XX_WHITE);
-  tft.setCursor(0, 0);
-  tft.println("iniciando...");
-
-  // configurar wi-fi
-  setupWiFi();
-
-  // configurar ble
-  BLEDevice::init("nodo central cultivo");
-  BLEServer *pServer = BLEDevice::createServer();
-  BLEService *pService = pServer->createService(SERVICE_UUID);
-  pCharacteristic = pService->createCharacteristic(
-                      CHARACTERISTIC_UUID,
-                      BLECharacteristic::PROPERTY_READ |
-                      BLECharacteristic::PROPERTY_WRITE |
-                      BLECharacteristic::PROPERTY_NOTIFY |
-                      BLECharacteristic::PROPERTY_INDICATE
-                    );
-  pCharacteristic->setCallbacks(new MyCallbacks());
-  pService->start();
-  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
-  pAdvertising->start();
-
-  // iniciar lora
-  LoRa.setPins(LORA_CS, LORA_RST, LORA_IRQ);
-  if (!LoRa.begin(915E6)) {
-    Serial.println("fallo al iniciar lora.");
-    while (1);
-  }
-
-  Serial.println("sistema listo.");
+// Función para inicializar BLE
+void setupBLE() {
+    BLEDevice::init("ESP32_BLE");
+    BLEServer *pServer = BLEDevice::createServer();
+    BLEService *pService = pServer->createService(SERVICE_UUID);
+    pCharacteristic = pService->createCharacteristic(CHARACTERISTIC_UUID, BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE);
+    pCharacteristic->setCallbacks(new MyCallbacks());
+    pService->start();
+    BLEDevice::startAdvertising();
+    Serial.println("Bluetooth iniciado, esperando datos...");
 }
 
+// Función para inicializar LoRa
+void setupLoRa() {
+    LoRa.setPins(LORA_CS, LORA_RST, LORA_IRQ);
+    if (!LoRa.begin(433E6)) {
+        Serial.println("Error al iniciar LoRa.");
+        while (1);
+    }
+    Serial.println("LoRa iniciado correctamente.");
+}
+
+// Función para inicializar pantalla y sensores
+void setupDisplay() {
+    Wire.begin();
+    aht.begin();
+    tft.initR(INITR_BLACKTAB);
+    tft.setRotation(1);
+    tft.fillScreen(ST77XX_BLACK);
+    tft.setCursor(0, 0);
+    tft.setTextColor(ST77XX_WHITE);
+    tft.setTextWrap(true);
+    tft.setTextSize(1);
+    tft.println("Nodo_1");
+}
+// Función para medir nivel de agua
+int medirNivelAgua() {
+    digitalWrite(TRIGGER, LOW);
+    delayMicroseconds(2);
+    digitalWrite(TRIGGER, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIGGER, LOW);
+    long duracion = pulseIn(ECHO, HIGH);
+    return duracion * 0.034 / 2;
+}
+float leerLuzAmbiente() {
+    int lecturaLDR = analogRead(LDR);  // Leer el pin analógico
+    float luzAmbiente = (lecturaLDR / 4095.0) * 100.0;  // Convertir a porcentaje
+    Serial.print("Luz Ambiente: ");
+    Serial.println( luzAmbiente);
+    return  luzAmbiente;
+}
+void controlIluminacion() {
+    luzAmbiente = leerLuzAmbiente();
+    if (luzAmbiente < 20.0) {  // Si la luz ambiente es baja (menos de 20%)
+        digitalWrite(RELE_LED, HIGH);  // Encender luz
+        Serial.println("Iluminación activada.");
+    } else {
+        digitalWrite(RELE_LED, LOW);  // Apagar luz
+        Serial.println("Iluminación desactivada.");
+    }
+}
+void controlBomba() {
+    nivelAgua = medirNivelAgua();
+    if (nivelAgua < DISTANCIA_MINIMA_AGUA) {
+        digitalWrite(RELE_BOMBA, HIGH);  // Activar la bomba si el nivel de agua es bajo
+        Serial.println("Bomba activada.");
+    } else {
+        digitalWrite(RELE_BOMBA, LOW);  // Apagar la bomba
+        Serial.println("Bomba desactivada.");
+    }
+}
+void leerHumedadSuelo() {
+    humedadSueloCap = analogRead(HumSueloCAP);
+    humedadSueloRes = analogRead(HumSueloRES);
+    Serial.print("Humedad Suelo Capacitivo: ");
+    Serial.println(humedadSueloCap);
+    Serial.print("Humedad Suelo Resistivo: ");
+    Serial.println(humedadSueloRes);
+}
+
+// Función principal de setup
+void setup() {
+    Serial.begin(9600);
+    pinMode(RELE_LED, OUTPUT);
+    pinMode(RELE_BOMBA, OUTPUT);
+    pinMode(TRIGGER, OUTPUT);
+    pinMode(ECHO, INPUT);
+    pinMode(LDR,INPUT);
+    digitalWrite(RELE_LED, LOW);
+    digitalWrite(RELE_BOMBA, LOW);
+    setupWiFi();
+    setupDisplay();
+    setupBLE();
+    setupLoRa();
+}
+
+// Función principal de loop
 void loop() {
-  // medir nivel de agua
-  int nivelAgua = medirNivelAgua();
-  Serial.print("nivel de agua (cm): ");
-  Serial.println(nivelAgua);
-
-  // si el nivel de agua es menor a la distancia minima, no activar la bomba
-  if (nivelAgua > DISTANCIA_MINIMA_AGUA) {
-    digitalWrite(RELE_BOMBA, HIGH);  // encender la bomba si hay agua suficiente
-    Serial.println("bomba encendida");
-  } else {
-    digitalWrite(RELE_BOMBA, LOW);  // apagar la bomba si el nivel es bajo
-    Serial.println("bomba apagada por falta de agua");
-  }
-
-  // verificar si llegaron datos por ble
-  if (dataReceived) {
-    procesarDatosBLE();
-    dataReceived = false;
-  }
-
-  // verificar si llegaron datos por lora
-  if (loraDataReceived) {
-    procesarDatosLoRa();
-    loraDataReceived = false;
-  }
-
-  delay(5000);  // esperar 5 segundos antes de medir otra vez
+    if (dataReceived) {
+        procesarDatosBLE();
+        dataReceived = false;
+    }
+    int packetSize = LoRa.parsePacket();
+    if (packetSize) {
+        while (LoRa.available()) {
+            loraData += (char)LoRa.read();
+        }
+        loraDataReceived = true;
+        Serial.println("Datos recibidos por LoRa.");
+    }
+    if (loraDataReceived) {
+        procesarDatosLoRa();
+        loraDataReceived = false;
+    }
+    nivelAgua = medirNivelAgua();
+    if (nivelAgua < DISTANCIA_MINIMA_AGUA) {
+        digitalWrite(RELE_BOMBA, HIGH);
+    } else {
+        digitalWrite(RELE_BOMBA, LOW);
+    }
 }
