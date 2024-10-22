@@ -4,7 +4,7 @@
 #include <Wire.h>
 #include <BH1750.h>
 
-// Instancia del sensor BH1750
+// Instancia del sensor BH1750 
 BH1750 lightMeter;
 
 void setup() {

@@ -1,0 +1,101 @@
+#include <Arduino.h>
+#include <Wire.h>
+#include <Adafruit_AHTX0.h>  // Para el sensor AHT10
+#include <BluetoothSerial.h>  // Librería para Bluetooth
+#include <esp_system.h>  // Para generar el ID único
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7735.h>
+#include <SPI.h>
+
+// Definir variables para el sensor de humedad
+const int HumResistivo = 34; // Humedad resistiva (parte superior)
+const int HumCapacitivo = 35; // Humedad capacitiva (parte inferior)
+
+// Definir pines para otros sensores
+const int Ldr = 32; // Sensor de luz
+const int UltrasonicoTrigger = 13; // Trigger ultrasónico
+const int UltrasonicoEcho = 12; // Echo ultrasónico
+
+// Definir para Bluetooth y pantalla
+BluetoothSerial SerialBT;
+Adafruit_AHTX0 aht; // Sensor de temperatura y humedad
+Adafruit_ST7735 tft = Adafruit_ST7735(5, 18, 19); // Pantalla SPI
+
+// Variables para la lógica
+String nodoID = "NODO2_BT"; // ID único para este nodo
+int nivelAgua = 0; // Inicializar nivel de agua
+float temp = 0.0, hum = 0.0; // Variables para temperatura y humedad
+
+// Función para medir nivel de agua con sensor ultrasónico
+int medirNivelAgua() {
+  long duracion;
+  digitalWrite(UltrasonicoTrigger, LOW);
+  delayMicroseconds(2);
+  digitalWrite(UltrasonicoTrigger, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(UltrasonicoTrigger, LOW);
+  
+  duracion = pulseIn(UltrasonicoEcho, HIGH);
+  int distancia = duracion * 0.034 / 2;  // Calcular distancia en cm
+  
+  return distancia;
+}
+
+// Setup inicial
+void setup() {
+  Serial.begin(115200); // Para debug
+  SerialBT.begin("Nodo2_Cultivo"); // Inicializar Bluetooth
+  Wire.begin(); // Iniciar I2C para el sensor AHT10
+  aht.begin(); // Iniciar AHT10
+  pinMode(HumResistivo, INPUT);
+  pinMode(HumCapacitivo, INPUT);
+  pinMode(Ldr, INPUT);
+  pinMode(UltrasonicoTrigger, OUTPUT);
+  pinMode(UltrasonicoEcho, INPUT);
+  
+  // Iniciar pantalla
+  tft.initR(INITR_144GREENTAB);
+  tft.fillScreen(ST77XX_BLACK);
+  tft.setCursor(0, 0);
+  tft.setTextColor(ST77XX_WHITE);
+  tft.setTextWrap(true);
+  tft.setTextSize(1);
+  
+  tft.println("Nodo 2 BT");
+}
+
+// Loop principal
+void loop() {
+  // Leer sensores de temperatura y humedad
+  sensors_event_t tempEvent, humEvent;
+  aht.getEvent(&humEvent, &tempEvent);
+  temp = tempEvent.temperature;  // Obtener temperatura
+  hum = humEvent.relative_humidity;  // Obtener humedad
+  
+  // Leer humedad del suelo
+  int humedadSueloResistivo = analogRead(HumResistivo);
+  int humedadSueloCapacitivo = analogRead(HumCapacitivo);
+  
+  // Leer luz ambiental
+  int luz = analogRead(Ldr);
+  
+  // Medir nivel de agua
+  nivelAgua = medirNivelAgua();
+
+  // Mostrar datos en pantalla
+  tft.fillScreen(ST77XX_BLACK);
+  tft.setCursor(0, 0);
+  tft.printf("Temp: %.1fC\nHum: %.1f%%\nLuz: %d\nHum Suelo (Resistivo): %d\nHum Suelo (Capacitivo): %d\nNivel Agua: %d\n", 
+              temp, hum, luz, humedadSueloResistivo, humedadSueloCapacitivo, nivelAgua);
+  
+  // Generar mensaje para enviar por Bluetooth
+  String mensaje = nodoID + ";Temp:" + String(temp) + ";Hum:" + String(hum) + ";Luz:" + String(luz) + 
+                   ";HumRes:" + String(humedadSueloResistivo) + ";HumCap:" + String(humedadSueloCapacitivo) + 
+                   ";NivelAgua:" + String(nivelAgua);
+  
+  // Enviar por Bluetooth
+  SerialBT.println(mensaje);
+  
+  // Esperar un poco antes de repetir
+  delay(5000);
+}
