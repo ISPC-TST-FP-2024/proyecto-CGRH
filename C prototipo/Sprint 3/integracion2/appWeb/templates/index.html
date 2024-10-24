@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>IoT Dashboard</title>
+
+</head>
+<body>
+
+<!-- Main Menu -->
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Configuración</a>
+    <a href="#">Links</a>
+    <a href="#">Login</a>
+</nav>
+
+<!-- Header -->
+<header>
+    <h1>IoT Dashboard</h1>
+    <div class="carousel">
+        <img src="https://via.placeholder.com/300" alt="Imagen 1">
+        <img src="https://via.placeholder.com/300" alt="Imagen 2">
+        <img src="https://via.placeholder.com/300" alt="Imagen 3">
+    </div>
+</header>
+
+<!-- Submenu con Filtros -->
+<div class="submenu">
+    <input type="text" id="nombre" placeholder="Nombre del dispositivo">
+    <input type="date" id="fecha_inicio">
+    <input type="date" id="fecha_fin">
+    <button onclick="filtrarDispositivos()">Buscar Dispositivos</button>
+    <button onclick="obtenerMediciones()">Ver Mediciones</button>
+    <button onclick="obtenerActuadores()">Estado Actuadores</button>
+</div>
+
+<!-- Main Content -->
+<main>
+    <h2>Resultados</h2>
+    <div id="tabla-resultados"></div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 IoT Dashboard. Todos los derechos reservados.</p>
+    <p>
+        <a href="#">Contacto</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">Twitter</a>
+    </p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    async function fetchData(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Error en la solicitud');
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error(error);
+            alert('Hubo un problema al obtener los datos.');
+        }
+    }
+
+    function renderTable(data) {
+        let html = '<table>';
+        html += '<tr>';
+        Object.keys(data[0]).forEach(key => {
+            html += `<th>${key}</th>`;
+        });
+        html += '</tr>';
+
+        data.forEach(row => {
+            html += '<tr>';
+            Object.values(row).forEach(value => {
+                html += `<td>${value}</td>`;
+            });
+            html += '</tr>';
+        });
+
+        html += '</table>';
+        document.getElementById('tabla-resultados').innerHTML = html;
+    }
+
+    async function filtrarDispositivos() {
+        const nombre = document.getElementById('nombre').value;
+        const fechaInicio = document.getElementById('fecha_inicio').value;
+        const fechaFin = document.getElementById('fecha_fin').value;
+
+        let url = `/dispositivos/fecha?fecha_inicio=${fechaInicio}&fecha_fin=${fechaFin}`;
+        if (nombre) url += `&nombre=${nombre}`;
+
+        const data = await fetchData(url);
+        if (data && data.length) renderTable(data);
+        else document.getElementById('tabla-resultados').innerHTML = '<p>No se encontraron datos.</p>';
+    }
+
+    async function obtenerMediciones() {
+        const data = await fetchData('/mediciones');
+        if (data && data.length) renderTable(data);
+        else document.getElementById('tabla-resultados').innerHTML = '<p>No hay mediciones disponibles.</p>';
+    }
+
+    async function obtenerActuadores() {
+        const data = await fetchData('/actuadores');
+        if (data && data.length) renderTable(data);
+        else document.getElementById('tabla-resultados').innerHTML = '<p>No hay información de actuadores disponible.</p>';
+    }
+</script>
+
+</body>
+</html>

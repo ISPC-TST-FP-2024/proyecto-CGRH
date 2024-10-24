@@ -1,7 +1,3 @@
-
-<p align=center><img src="../E recursos/image1-8.png" width="900"></p>
-
-
 ## Informacion General
 ***
 ### Carpeta: ***D Prototipo*** 
