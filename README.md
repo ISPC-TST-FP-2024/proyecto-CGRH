@@ -5,18 +5,17 @@
 
 <h2 align=center><strong>Formación Profesional: Desarrollador de Dispositivos IoT.</strong></h2>
 
-[![IOT.jpg](https://i.postimg.cc/Y2mZ1Mj3/IOT.jpg)](https://postimg.cc/rzMfT610) 
+### Materias que integran la FP:
 
-## Materias que integran la FP:   
+- `Electrónica Microcontrolada` = **Prof. Gonzalo Vera.**
 
-### Electrónica Microcontrolada, dictada por Prof. Gonzalo Vera.
+- `Sensores y Actuadores` = **Prof. Jorge Morales.**
 
-### Sensores y Actuadores, dictada por Prof. Jorge Morales.
-
-### Redes, dictada por Prof. Dante Violi.
+- `Redes` = **Prof. Dante Violi.**
 
 
 ## Alumnos: 
+
 - Jose Marquez, GitHub: [@marquezjose](https://github.com/marquezjose).
 - Luciano Lujan, GitHub: [@lucianoilujan](https://github.com/lucianoilujan).
 - Vittorio Durigutti, GitHub: [@vittoriodurigutti](https://github.com/vittoriodurigutti).
@@ -37,7 +36,7 @@
 - Joaquin Garzón, GitHub: [@Joacogarzonn](https://github.com/Joacogarzonn)  
 
 ---  
-**Organizacion y Asignacion de roles para el equipo.**
+### Organizacion y Asignacion de roles para el equipo.
 
 <p align=center><img src="./E recursos/EQUIPO SCRUM.jpg" width="800"></p> 
 
@@ -129,9 +128,7 @@ Cada carpeta contiene subcarpetas crrespondientes al desarrollo de cada sprint e
 Esto facilita un acceso más rápido y eficiente a la documentación relevante, asegurando que los avances se integren de manera coherente en cada etapa del proyecto.  
   
   
-<h2 align=center><strong>Resumen de la FP: Desarrollador de Dispositivos IoT</strong></h2>
 
-[![4.png](https://i.postimg.cc/VvB0twYf/4.png)](https://postimg.cc/2Ly5pPbM)
 
 <h2 align=center><strong>Proyecto Central</strong></h2>  
 
@@ -190,7 +187,7 @@ El sistema se enfoca en la eficiencia y sostenibilidad del riego mediante la ges
 [![iotgestioninteligenteagua.jpg](https://i.postimg.cc/CKyYfpw5/iotgestioninteligenteagua.jpg)](https://postimg.cc/DScRtDJ3)    
          
 <h2 align=center><strong>Objetivos</strong></h2>  
-***  
+  
 
 ## Funcionamiento del Sistema
 
