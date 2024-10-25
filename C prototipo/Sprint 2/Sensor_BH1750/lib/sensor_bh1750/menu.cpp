@@ -1,7 +1,8 @@
 #include "Menu.h"
 
 // Constructor del menú
-Menu::Menu(  LiquidCrystal_I2C, Teclado& teclado) : _lcd(lcd), _teclado(teclado), _currentMenuIndex(0), _currentMenuDepth(0) {}
+Menu::Menu(LiquidCrystal_I2C& lcd, Teclado& teclado) 
+    : _lcd(lcd), _teclado(teclado), _currentMenuIndex(0) {}
 
 // Opciones del menú principal
 MenuOption mainMenu[] = {
@@ -14,6 +15,7 @@ MenuOption mainMenu[] = {
     {"7. Sistema", nullptr}
 };
 
+// Tamaño del menú principal
 const int mainMenuSize = sizeof(mainMenu) / sizeof(MenuOption);
 
 // Muestra el menú en la pantalla LCD
@@ -21,7 +23,6 @@ void Menu::displayMenu() {
     _lcd.clear();
     _lcd.setCursor(0, 0);
     _lcd.print(mainMenu[_currentMenuIndex].title);
-    // Aquí puedes imprimir más información, como las opciones secundarias si es necesario
 }
 
 // Navega por el menú basado en la entrada del teclado
@@ -40,11 +41,13 @@ void Menu::navigate() {
         executeCurrentOption();
     } 
     else if (key == '#') {  // Escape
-        // Lógica para salir del menú o regresar al nivel anterior
         _lcd.clear();
         _lcd.print("Saliendo...");
         delay(1000);  // Tiempo de espera antes de salir
-        // Podrías implementar un retorno a un menú anterior aquí
+        _lcd.clear();
+        _lcd.print("Menu Inicial");
+        _currentMenuIndex = 0;  // Regresa al menú principal
+        displayMenu();
     }
 }
 

@@ -1,4 +1,4 @@
-#ifndef MENU_H
+#ifndef MENU_H  
 #define MENU_H
 
 #include "LiquidCrystal_I2C.h"
@@ -21,10 +21,9 @@ private:
     LiquidCrystal_I2C& _lcd;
     Teclado& _teclado;
     int _currentMenuIndex;  // Índice de la opción de menú seleccionada
-    int _currentMenuDepth;  // Nivel de profundidad en el menú
 
-    void updateDisplay();  // Actualiza la pantalla LCD según la opción seleccionada
     void executeCurrentOption();  // Ejecuta la acción de la opción seleccionada
 };
 
 #endif
+
