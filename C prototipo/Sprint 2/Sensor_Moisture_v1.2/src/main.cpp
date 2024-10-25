@@ -1,33 +1,19 @@
-/******************
-A falta de un sensor de humedad disponible en wokwi, 
-se utiliza a modo de ejemplo un potenciomentro
+#include <Arduino.h>
+#include "MoistureSensor.h"  // Asegúrate de incluir el archivo de encabezado
 
-********************/ 
-
-
-// Definir el pin ADC para el sensor de humedad (AOUT conectado a pin 34)
 #define MOISTURE_SENSOR_PIN 34
 
+MoistureSensor moistureSensor(MOISTURE_SENSOR_PIN); // Crear instancia del sensor
+
 void setup() {
-  // Inicializar la comunicación serial
   Serial.begin(115200);
-  
-  // Configurar el pin del sensor como entrada
-  pinMode(MOISTURE_SENSOR_PIN, INPUT);
+  moistureSensor.begin();  // Inicializa el sensor
 }
 
 void loop() {
-  // Leer el valor analógico del sensor de humedad
-  int sensorValue = analogRead(MOISTURE_SENSOR_PIN);
-  
-  // Convertir el valor en un porcentaje de humedad (0-100%)
-  int moisturePercent = map(sensorValue, 0, 4095, 0, 100);
-  
-  // Mostrar el valor en el monitor serial
+  int moisturePercent = moistureSensor.readMoisture(); // Lee la humedad
   Serial.print("Humedad del suelo: ");
   Serial.print(moisturePercent);
   Serial.println("%");
-
-  // Añadir un retraso para las siguientes lecturas
-  delay(1000);
+  delay(1000);  // Añadir un retraso para las siguientes lecturas
 }
