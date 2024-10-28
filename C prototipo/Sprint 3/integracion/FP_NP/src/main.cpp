@@ -45,8 +45,8 @@ AHT10 aht10;
 String loraData = "";
 bool loraDataReceived = false;
 // wi-fi
-const char* ssid = "DZS_5380";
-const char* password = "dzsi123456789";
+const char* ssid = "Vitto";
+const char* password = "vittorio10";
 const char* serverName = "http://192.168.55.104/api";  // url del servidor para enviar los datos
 
 
@@ -75,7 +75,7 @@ class MyServerCallbacks : public BLEServerCallbacks {
   void onDisconnect(BLEServer* server) {
     deviceConnected = false;  // Cambia el estado cuando el cliente se desconecta
     Serial.println("Cliente desconectado.");
-    // BLEDevice::startAdvertising();  // Reinicia la publicidad para permitir nuevas conexiones
+    BLEDevice::startAdvertising();  // Reinicia la publicidad para permitir nuevas conexiones
   }
 };
 void inicializarServidorBLE() {
@@ -110,7 +110,7 @@ void inicializarServidorBLE() {
   BLEAdvertising *advertising = BLEDevice::getAdvertising();
   advertising->addServiceUUID(SERVICE_UUID);
   advertising->setScanResponse(true);
-  // BLEDevice::startAdvertising();
+  BLEDevice::startAdvertising();
 
   Serial.println("Servidor BLE listo y anunciando...");
 }
@@ -229,6 +229,24 @@ void enviarDatosServidor(String nodoID, float temp, float hum, int nivelAgua, fl
     } else {
          String postData = "data";
         guardarDatosEnSD(postData);  // Guardar en SD si no hay conexión WiFi
+    }
+}
+
+// Manejo de errores BLE
+void handleBLEError(esp_err_t error) {
+    switch (error) {
+        case ESP_ERR_NO_MEM:
+            Serial.println("Error: No hay suficiente memoria para la conexión.");
+            break;
+        case ESP_ERR_INVALID_STATE:
+            Serial.println("Error: El servidor BLE está en un estado incorrecto.");
+            break;
+        case ESP_ERR_TIMEOUT:
+            Serial.println("Error: Tiempo de conexión agotado.");
+            break;
+        default:
+            Serial.printf("Error desconocido: 0x%x\n", error);
+            break;
     }
 }
 

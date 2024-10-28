@@ -95,7 +95,7 @@ bool initializeBLE() {
     scan->start(5); // Escanear durante 5 segundos
 
     // Dirección MAC del servidor BLE (ajusta a la dirección de tu servidor)
-    BLEAddress serverAddress("08:d1:f9:a4:f4:ea"); // Reemplazado con la dirección MAC correcta
+    BLEAddress serverAddress("fc:b4:67:f4:f0:96"); // Reemplazado con la dirección MAC correcta
 
     // Intentar conectar al servidor
     return conectaralServer(serverAddress); // Devuelve true si se conecta, false si no
