@@ -1,8 +1,10 @@
-// A falta de presencia de una bomba similar en el simulador Wokwi. Se utiliza un led. Al ejecutarse el sistema
-// el reemplazo de led, conectaria al RELE, segun lo sensado por el sensor de ultrasonido, para medir la altura del agua
-// Y este proecederia a encender.
-
+#include <Arduino.h>
 #include <NewPing.h>
+#include "MyLoRaWan.h"  // Asegúrate de que coincide con el nombre del archivo
+#include <ESP32_LoRaWAN.h>
+
+#define VextPin 21 // Cambiado de Vext a VextPin
+
 
 // Definición de pines para el sensor ultrasónico
 #define TRIGGER_PIN 13
@@ -16,11 +18,14 @@
 #define WATER_THRESHOLD 50
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+MyLoRaWanClass loraWan;  // Instancia de tu subclase MyLoRaWanClass
 
 void setup() {
-  Serial.begin(115200);  // Inicializa la comunicación serial
-  pinMode(RELAY_PIN, OUTPUT);  // Configura el relé como salida
-  digitalWrite(RELAY_PIN, LOW);  // Apaga la bomba al inicio
+  Serial.begin(115200);            // Inicializa la comunicación serial
+  pinMode(RELAY_PIN, OUTPUT);      // Configura el relé como salida
+  digitalWrite(RELAY_PIN, LOW);    // Apaga la bomba al inicio
+
+  loraWan.displayJoining();         // Llamada de ejemplo a la subclase
 }
 
 void loop() {
