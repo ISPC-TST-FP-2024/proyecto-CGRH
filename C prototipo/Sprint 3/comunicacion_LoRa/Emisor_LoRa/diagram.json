@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "author": "Fernando gimenez",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -96, "left": 24.04, "attrs": {} },
+      {
+        "type": "chip-lora-sx1278",
+        "id": "chip1",
+        "top": -66.18,
+        "left": 206.4,
+        "rotate": 90,
+        "attrs": {}
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": 82.8,
+        "left": -130.6,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": -0.1,
+        "left": -92.5,
+        "rotate": 90,
+        "attrs": { "color": "blue" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 129.05,
+        "left": -59,
+        "rotate": 180,
+        "attrs": { "value": "470" }
+      },
+      { "type": "wokwi-gnd", "id": "gnd1", "top": 163.2, "left": -125.4, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "esp:13", "r1:1", "green", [ "h0" ] ],
+      [ "led1:A", "r1:2", "green", [ "v0" ] ],
+      [ "led1:C", "gnd1:GND", "green", [ "v0" ] ],
+      [ "btn1:2.r", "led1:C", "green", [ "v9.8", "h-73.5", "v57.6" ] ],
+      [ "esp:12", "btn1:1.r", "green", [ "h-57.45", "v19.2", "h-19.2" ] ],
+      [ "esp:GND.1", "btn1:2.r", "black", [ "h-47.85", "v19.2", "h-48" ] ],
+      [ "chip1:VCC", "esp:3V3", "red", [ "v-49.02", "h-171.62" ] ],
+      [ "chip1:GND", "esp:GND.2", "black", [ "v-39.42", "h-37.22" ] ],
+      [ "esp:19", "chip1:MISO", "green", [ "h19.2", "v-115.2", "h86.4" ] ],
+      [ "esp:23", "chip1:MOSI", "green", [ "h67.2", "v96", "h46.82" ] ],
+      [ "esp:18", "chip1:SLCK", "green", [ "h57.6", "v38.4", "h66.02" ] ],
+      [ "esp:5", "chip1:CS", "green", [ "h48", "v38.4", "h85.22" ] ],
+      [ "esp:14", "chip1:REST", "green", [ "h-19.05", "v96", "h249.6" ] ],
+      [ "esp:2", "chip1:DIO0", "green", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }
