@@ -1,0 +1,19 @@
+{
+    "name": "lora-sx1278",
+    "author": "Fernando gimenez",
+    "pins": [
+      "GND",
+      "DIO1",
+      "DIO2",
+      "DIO3",
+      "VCC",
+      "MISO",
+      "MOSI",
+      "SLCK",
+      "CS",
+      "DIO0",
+      "REST",
+      "GND"
+    ],
+    "controls": []
+  }

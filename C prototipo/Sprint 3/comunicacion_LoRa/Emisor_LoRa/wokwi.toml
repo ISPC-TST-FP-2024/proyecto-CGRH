@@ -1,0 +1,7 @@
+[wokwi]
+version = 1
+firmware = '.pio\build\nodemcu-32s\firmware.bin'
+elf = '.pio\build\nodemcu-32s\firmware.elf'
+[[chip]]
+name = 'lora-sx1278'  # To use the chip in diagram.json, add a part with "chip-inverter" type.
+binary = 'chips/lora-sx1278.chip.c'
