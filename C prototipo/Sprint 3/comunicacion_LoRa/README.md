@@ -155,6 +155,6 @@ void loop() {
 
 **3- Mínima latencia:** Esta implementación ofrece una respuesta casi inmediata sin bloquear el sistema ni arriesgar conflictos.  
   
-**Video de presentacion del ejemplo implementado**  
+# **Video de presentacion del ejemplo implementado**  
 
 [VIDEO DE PRESENTACION](https://youtu.be/E_M0U7rgpyw?feature=shared)
