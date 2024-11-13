@@ -2,7 +2,7 @@
 [![imagen-ispc-FP.jpg](https://i.postimg.cc/QC7SL8vJ/imagen-ispc-FP.jpg)](https://postimg.cc/0K87Dskz)
 
 ## **Tecnicatura Superior en Telecomunicaciones**  
-## **Formación Profesional: Desarrollador de Dispositivos IoT**
+## **Formación Profesional: Control y Gestion de Recusos Hidricos**
 
 ---
 
@@ -151,6 +151,8 @@ Cada carpeta incluye subcarpetas para los sprints.
 
 ## **Recursos**
 
+[![Designer-5.jpg](https://i.postimg.cc/VLvJfCB1/Designer-5.jpg)](https://postimg.cc/svFjK1N0) 
+
 | Herramientas              |
 |---------------------------|
 | Tinkercad                 |
@@ -158,8 +160,6 @@ Cada carpeta incluye subcarpetas para los sprints.
 | PlatformIO                |
 | Wokwi                     |
 | Proteus                   |
-
-[![Designer-2.jpg](https://i.postimg.cc/V6Jhs46n/Designer-2.jpg)](https://postimg.cc/9RjbJdyQ) 
 
 ***  
 Video explicativo de la distribucion de componentes en el cultivo vertical: 
