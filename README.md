@@ -8,6 +8,8 @@
 
 ### 📚 Materias que integran la FP:
 
+[![Designer-3.jpg](https://i.postimg.cc/52pKwDQ8/Designer-3.jpg)](https://postimg.cc/HrctmZ2L) 
+
 - `Electrónica Microcontrolada` — **Prof. Gonzalo Vera**
 - `Sensores y Actuadores` — **Prof. Jorge Morales**
 - `Redes` — **Prof. Dante Violi**
@@ -39,9 +41,7 @@
 ---  
 ### 🚀 Organización y Roles del Equipo
 
-<p align="center">
-  <img src="./E recursos/EQUIPO SCRUM.jpg" width="600" alt="Equipo Scrum"/>
-</p>
+[![1.png](https://i.postimg.cc/RV6T3rD8/1.png)](https://postimg.cc/fJsdFPZj) 
 
 ## **Sobre la Formación Profesional**
 
@@ -97,11 +97,15 @@ Cada carpeta incluye subcarpetas para los sprints.
 
 ## **🌱 Proyecto Central**
 
+[![Designer-4.jpg](https://i.postimg.cc/50QPW07m/Designer-4.jpg)](https://postimg.cc/CBYCjFVZ)
+
 **Objetivo:** Optimizar el uso y gestión del agua en entornos como jardines y huertas urbanas mediante un sistema de riego inteligente.
 
 ---
 
 ## **🔧 Componentes del Proyecto**
+
+[![Designer-1.jpg](https://i.postimg.cc/q7MYSpHm/Designer-1.jpg)](https://postimg.cc/yDtvS4d9) 
 
 ### Hardware:
 - **Microcontroladores:** ESP32
@@ -154,6 +158,8 @@ Cada carpeta incluye subcarpetas para los sprints.
 | PlatformIO                |
 | Wokwi                     |
 | Proteus                   |
+
+[![Designer-2.jpg](https://i.postimg.cc/V6Jhs46n/Designer-2.jpg)](https://postimg.cc/9RjbJdyQ) 
 
 ***  
 Video explicativo de la distribucion de componentes en el cultivo vertical: 
