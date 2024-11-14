@@ -1,6 +1,7 @@
 # app.py
 from flask import Flask, request, jsonify, render_template
 from db import ejecutar_consulta, insertar_datos
+import os
 
 app = Flask(__name__)
 
@@ -81,5 +82,7 @@ def obtener_datos():
         return jsonify({'status': 'Error al obtener datos', 'error': str(e)}), 500
 
 if __name__ == '__main__':
+    # Leer el puerto asignado desde la variable de entorno PORT
+    port = int(os.environ.get("PORT", 5000))
     # Ejecutar la API Flask
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    app.run(host='0.0.0.0', port=port)
