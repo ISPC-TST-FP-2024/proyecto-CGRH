@@ -1,8 +1,8 @@
 # config.py
 DB_CONFIG = {
-    'host': 'gonaiot.com',
-    'port': 3310,  # Puerto mapeado en el contenedor
-    'user': 'opalo_user',
-    'password': 'opalo_password',
-    'database': 'iot_project_opalo'
+    'host': 'localhost',        # Conectar a la base de datos local
+    'port': 3306,               # Puerto estándar de MySQL
+    'user': 'FP',               # Nombre de usuario de la base de datos
+    'password': 'FP',           # Contraseña del usuario (ajústala según corresponda)
+    'database': 'iot_project_FP'  # Nombre de la base de datos
 }

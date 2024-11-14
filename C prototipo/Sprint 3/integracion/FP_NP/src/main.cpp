@@ -47,7 +47,7 @@ bool loraDataReceived = false;
 // wi-fi
 const char* ssid = "Vitto";
 const char* password = "vittorio10";
-const char* serverName = "http://192.168.55.104/api";  // url del servidor para enviar los datos
+const char* serverName = "http://192.168.100.18:5001/api";  // url del servidor para enviar los datos
 
 
 ///////////////////////////////////////////////////////////////////////////////

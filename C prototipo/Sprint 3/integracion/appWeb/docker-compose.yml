@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: appweb_flask
+    ports:
+      - "5000:5000"
+    environment:
+      - MYSQL_HOST=192.168.0.100  # IP del contenedor MySQL (puede cambiar según tu configuración)
+      - MYSQL_PORT=3310            # Puerto mapeado en el contenedor MySQL
+      - MYSQL_USER=opalo_user
+      - MYSQL_PASSWORD=opalo_password
+      - MYSQL_DATABASE=iot_project_opalo
+    restart: always
+    volumes:
+      - .:/app  # Montar el directorio actual en /app dentro del contenedor
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
