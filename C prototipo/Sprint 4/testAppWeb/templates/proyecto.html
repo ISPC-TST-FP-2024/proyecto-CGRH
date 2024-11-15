@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalles del Proyecto IoT para monitorear cultivos verticales inteligentes">
+    <title>Proyecto IoT: Cultivo Vertical Inteligente</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/proyecto.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>
+            <img src="{{ url_for('static', filename='assets/plantin.png') }}" alt="Logo CGRH" class="header-icon"> 
+            Proyecto CGRH - Cultivo Vertical Inteligente
+            <img src="{{ url_for('static', filename='assets/plantin.png') }}" alt="Logo CGRH" class="header-icon">
+        </h1>
+        <p>Detalles del Proyecto IoT de Cultivo Vertical Inteligente.</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="{{ url_for('index') }}" class="back-btn">Volver al Inicio</a>
+    </nav>
+
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <!-- Descripción del Proyecto -->
+        <div class="project-description">
+            <h2>
+                <img src="{{ url_for('static', filename='assets/proyect.png') }}" alt="Icono de Proyecto" class="icon">
+                Descripción del Proyecto IoT
+            </h2>
+            <p>Este proyecto utiliza un ESP32 para monitorear y gestionar un sistema de riego vertical inteligente. Los sensores de ambiente miden la temperatura, humedad, luz ambiental, y la humedad del suelo, controlando actuadores como bombas de agua y ventiladores para optimizar el crecimiento del cultivo.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Proyecto IoT de Cultivo Vertical Inteligente.</p>
+        <div class="footer-icons">
+            <a href="https://github.com/ISPC-TST-FP-2024/proyecto-CGRH.git" target="_blank">
+                <img src="{{ url_for('static', filename='assets/github.svg') }}" alt="GitHub" class="footer-icon">
+            </a>
+            <a href="https://www.ispc.edu.ar/" target="_blank">
+                <img src="{{ url_for('static', filename='assets/ispc.png') }}" alt="ISPC" class="footer-icon">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
